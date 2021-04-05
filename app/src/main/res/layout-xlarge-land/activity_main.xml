@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clemson University"
+        android:textAlignment="center"
+        android:textSize="115sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange"/>
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_view"
+        android:layout_gravity="center"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/orange">
+
+        <TextView
+            android:layout_width="750dp"
+            android:layout_height="match_parent"
+            android:text="@string/profileTitle"
+            android:textAlignment="center"
+            android:layout_marginLeft="250dp"
+            android:textSize="100sp"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src = "@drawable/male"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map_view"
+        android:layout_gravity="center"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/orange"
+        >
+
+        <TextView
+            android:layout_width="750dp"
+            android:layout_height="match_parent"
+            android:text="@string/mapTitle"
+            android:textAlignment="center"
+            android:layout_marginLeft="250dp"
+            android:textSize="100sp"/>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/mapsline"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sports_view"
+        android:layout_gravity="center"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/orange">
+
+        <TextView
+            android:layout_width="750dp"
+            android:layout_height="match_parent"
+            android:text="@string/sportsTitle"
+            android:textAlignment="center"
+            android:layout_marginLeft="250dp"
+            android:textSize="100sp"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/football"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/funfacts_view"
+        android:layout_gravity="center"
+        android:layout_width="1000dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="630dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/orange">
+
+        <TextView
+            android:layout_width="750dp"
+            android:layout_height="match_parent"
+            android:text="@string/gameTitle"
+            android:textAlignment="center"
+            android:layout_marginLeft="250dp"
+            android:textSize="100sp"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/funfacts"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

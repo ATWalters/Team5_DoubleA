@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AllAroundClemson</string>
+    <string name="profileTitle">Profile</string>
+    <string name="mapTitle">Campus Map</string>
+    <string name="sportsTitle">Sports</string>
+    <string name="gameTitle">Trivia Game</string>
 </resources>

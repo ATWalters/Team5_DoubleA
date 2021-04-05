@@ -4,4 +4,56 @@
     <string name="mapTitle">Campus Map</string>
     <string name="sportsTitle">Sports</string>
     <string name="gameTitle">Trivia Game</string>
+
+    <string-array name="penalty_name">
+        <item>Blocking below the waist</item>
+        <item>Block in the back</item>
+        <item>Chop block</item>
+        <item>Clipping</item>
+        <item>Contacting the kicker</item>
+        <item>Delay of game</item>
+        <item>Encroachment</item>
+        <item>Equipment violation</item>
+        <item>Face mask</item>
+        <item>False start</item>
+        <item>Helmet-to-helmet collision</item>
+        <item>Helping the runner</item>
+        <item>Holding</item>
+        <item>Horse-collar tackle</item>
+        <item>Illegal batting</item>
+        <item>Illegal formation</item>
+        <item>Illegal forward pass</item>
+        <item>Illegal hands to the face</item>
+        <item>Illegal kick</item>
+        <item>Illegal kickoff</item>
+        <item>Illegal motion</item>
+        <item>Illegal participation/Too many players</item>
+        <item>Illegal shift</item>
+        <item>Illegal substitution/Too many players in the formation</item>
+        <item>Illegal touching of a forward pass</item>
+        <item>Illegal touching of a free kick</item>
+        <item>Illegal touching of a scrimmage kick</item>
+        <item>Illegal use of hands</item>
+        <item>Ineligible receiver downfield</item>
+        <item>Intentional grounding</item>
+        <item>Leaping</item>
+        <item>Leverage</item>
+        <item>Neutral Zone Infraction</item>
+        <item>Offside</item>
+        <item>Offside pass</item>
+        <item>Pass interference</item>
+        <item>Personal foul</item>
+        <item>Punt out of bounds</item>
+        <item>Rough play</item>
+        <item>Roughing the passer</item>
+        <item>Roughing the kicker</item>
+        <item>Roughing the snapper</item>
+        <item>Running into the kicker</item>
+        <item>Sideline infraction</item>
+        <item>Spearing</item>
+        <item>Targeting</item>
+        <item>Tim count violation</item>
+        <item>Tripping</item>
+        <item>Unsportsmanlike conduct</item>
+    </string-array>
 </resources>

@@ -5,6 +5,11 @@
     <string name="sportsTitle">Sports</string>
     <string name="gameTitle">Trivia Game</string>
 
+    <string name="homeTeam">Clemson</string>
+    <string name="awayTeam">%1$s</string>
+    <string name="homeScore">0</string>
+    <string name="awayScore">0</string>
+
     <string-array name="penalty_name">
         <item>Blocking below the waist</item>
         <item>Block in the back</item>
@@ -52,8 +57,107 @@
         <item>Sideline infraction</item>
         <item>Spearing</item>
         <item>Targeting</item>
-        <item>Tim count violation</item>
+        <item>Time count violation</item>
         <item>Tripping</item>
         <item>Unsportsmanlike conduct</item>
+    </string-array>
+
+    <string-array name="penalty_description">
+        <item>An illegal block, from any direction, below the waist by any defensive player or
+            by an offensive player under certain situations, by any player after change of
+            possession, by any player in high school with certain exceptions. Sometimes incorrectly
+            referred to as a "chop block".</item>
+        <item>A blocker contacting a non-ballcarrying member of the opposing team from behind and
+            above the waist.</item>
+        <item>An offensive player tries to cut block a defensive player that is already being
+            blocked by another offensive player. The second block may need to be below the thigh
+            or knee, depending on the code.	</item>
+        <item>A blocker contacting a non-ballcarrying opponent from behind and at or below the waist
+        </item>
+        <item>Any contact with the kicker when in the act of kicking, unless the ball has touched
+            the ground (as in a bad snap), the defender touches the ball, contact by a blocker
+            causes the contact, or the contact is slight or incidental.	</item>
+        <item>Any action which delays the next play.</item>
+        <item>Before the snap, a defensive player illegally crosses the line of scrimmage
+            and makes contact with an opponent or has a clear path to the quarterback.</item>
+        <item>Any player in the game without necessary safety equipment.</item>
+        <item>Grasping the face mask of another player while attempting to block or tackle him.
+        </item>
+        <item>An offensive player illegally moves after lining up for, but prior to, the snap.
+        </item>
+        <item>The act of hitting another player's helmet with your own.</item>
+        <item>When a member of the offensive or receiving team pushes, pulls, grasps, or lifts a
+            person in possession of the ball.</item>
+        <item>Illegally grasping or pulling an opponent other than the ball carrier while attempting
+        to ward off a block or cover a receiver.</item>
+        <item>Illegally tackling another player by grabbing the inside of the ball carrier's
+        shoulder pads or jersey from behind and yanking the player down.</item>
+        <item>Any intentional batting of a loose ball or ball in player possession.</item>
+        <item>Less than seven players on the line of scrimmage at the snap of the ball.</item>
+        <item>A forward pass that is thrown from past the line of scrimmage.</item>
+        <item>Pushing or hitting a player on offense in the head or helmet.</item>
+        <item>Any ball not kicked in accordance with the rules, for instance:\n
+            \u2022 When an attempted drop kick bounces more than once before being kicked.\n
+            \u2022 When a player kicks the ball after a turnover.\n
+            \u2022 When a player kicks the ball after having advanced the ball past the line of
+            scrimmage.
+        </item>
+        <item>The ball, after a kickoff, heads out of bounds between both goal lines without
+        touching any player on either team.</item>
+        <item>A player in motion is moving forward at the time of the snap.</item>
+        <item>Twelve or more players participate during the play</item>
+        <item>A player is not in motion but is not set before the snap.</item>
+        <item>The offense has twelve or more players in the huddle for a period of 3-5 seconds
+        or twelve or more players are in the formation before a play.</item>
+        <item>A forward pass first touches an ineligible receiver. If the ball is touched by the
+        defense first, any player may touch it.</item>
+        <item>The ball, after the free kick, first touches a member of the kicking team prior to
+        travelling ten yards.</item>
+        <item>The ball, during the scrimmage kick, is touched by a kicking team player, unless
+        the kick is touched by the receiving team or another member of the kicking team.</item>
+        <item>Illegal use of the hands against a player on offense while attempting to ward off a
+        block, cover a receiver, or tackle a ball carrier.</item>
+        <item>An ineligible receiver is past the line of scrimmage prior to a forward pass.</item>
+        <item>A forward pass is thrown intentionally incomplete so that the pass avoids loss of
+            yardage or to conserve time.</item>
+        <item>A defender at least one yard in front of the line of scrimmage running forward and
+        leaping in an attempt to block a field goal or a point-after tries to land on other players
+        on either team.</item>
+        <item>A defensive player jumping or standing on a teammate or an opponent to block
+        or attempt to block an opponent's kick.</item>
+        <item>Before the snap, a defensive player jumps into the neutral zone and "startles" an
+        offensive player, causing him to false start</item>
+        <item>A player is on the wrong side of the line of scrimmage when the ball is snapped.
+        </item>
+        <item>Any act to direct the ball forward other than a kick or a forward pass.</item>
+        <item>Making physical contact with an intended receiver, after the ball has been thrown
+        and before it has been touched by another player, in order to hinder or prevent him from
+        catching a forward pass.</item>
+        <item>Any conduct or safety related infraction. Could include unnecessary roughness, or
+            "piling on" a ball carrier who is already down.</item>
+        <item>A scrimmage kick goes out of bounds in flight untouched by the receiving team
+        between the 20 yard lines.</item>
+        <item>A flagrant conduct- or safety-infraction. Includes fighting, punching, and intentional
+        contact with an official.</item>
+        <item>A defender continues an effort to tackle or "hit" a passer after the passer has
+        already thrown a pass.</item>
+        <item>A defender, having missed an attempt to block a kick, tackles the kicker or otherwise
+            runs into the kicker in a way tha tmight injure the kicker or his vulnerable extended
+            kicking leg.</item>
+        <item>On a punt or field goal attempt, the long snapper is allowed to regain his balance
+            and assume a protective position before he is contacted by the defense.</item>
+        <item>On a kicking play where the defense fails to touch the kicked ball, the defense runs
+            into the kicker/punter.</item>
+        <item>A player is outside of the team box, a coach is outside of the coaches' box, or too
+        many coaches are in the coaches' box.</item>
+        <item>Tackling or otherwise contacting an opponent with one's helmet.</item>
+        <item>A defensive player tackles with the crown of his helmet, by initiating contact to the
+        opponent's head above the player's neck.</item>
+        <item>On offense, failing to snap the ball before the play clock reaches zero. Delay of game
+        </item>
+        <item>A player trips another play with the lower leg</item>
+        <item>Any person acts or speaks in a manner deemed to be intentionally harmful or especially
+            objectionable by the game officials, or by rule. Unsportsmanlike conduct is a non-contact
+            foul; if contact is involved it becomes a personal foul.</item>
     </string-array>
 </resources>

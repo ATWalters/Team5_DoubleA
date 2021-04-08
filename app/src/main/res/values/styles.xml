@@ -5,4 +5,12 @@
         <item name="android:padding">@dimen/penalty_list_padding</item>
     </style>
 
+    <style name="teamName">
+        <item name="android:textSize">@dimen/team_name_size</item>
+    </style>
+
+    <style name="teamScore">
+        <item name="android:textSize">@dimen/team_score_size</item>
+    </style>
+
 </resources>

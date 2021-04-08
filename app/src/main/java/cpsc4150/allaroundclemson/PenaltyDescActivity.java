@@ -16,12 +16,12 @@ public class PenaltyDescActivity extends AppCompatActivity {
         setContentView(R.layout.activity_penalty_desc);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fragment = fragmentManager.findFragmentById(R.id.penalty_fragment_container);
+        Fragment fragment = fragmentManager.findFragmentById(R.id.penaltyFragmentContainer);
 
         if(fragment == null){
             int penaltyId = getIntent().getIntExtra(EXTRA_PENALTY_ID, 1);
             fragment = PenaltyDescriptionFragment.newInstance(penaltyId);
-            fragmentManager.beginTransaction().add(R.id.penalty_fragment_container, fragment).commit();
+            fragmentManager.beginTransaction().add(R.id.penaltyFragmentContainer, fragment).commit();
         }
     }
 }

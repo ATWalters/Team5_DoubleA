@@ -35,8 +35,11 @@ public class PenaltyDescriptionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_penalty_description, container, false);
 
-        TextView descriptionTextView = view.findViewById(R.id.penaltyDesc);
-        descriptionTextView.setText(getString(R.string.penaltyDesc, mPenalty.getName(), mPenalty.getDescription()));
+        TextView descriptionNameTextView = view.findViewById(R.id.penalty_desc_name);
+        descriptionNameTextView.setText(getString(R.string.penaltyDesc, mPenalty.getName()));
+
+        TextView descriptionTextView = view.findViewById(R.id.penalty_desc);
+        descriptionTextView.setText(getString(R.string.penaltyDesc, mPenalty.getDescription()));
 
         return view;
     }

@@ -11,7 +11,10 @@
     <string name="awayScore">0</string>
 
     <string name="penaltyHolder">penalty</string>
-    <string name="penaltyDesc">%1$s:\n%2$s</string>
+    <string name="penaltyDescName">%1$s</string>
+    <string name="penaltyDesc">%1$s</string>
+    <string name="clickBelow">Click a penalty below for a description of what it means.</string>
+
     <string-array name="penalty_name">
         <item>Blocking below the waist</item>
         <item>Block in the back</item>

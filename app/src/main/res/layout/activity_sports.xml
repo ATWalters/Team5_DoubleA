@@ -51,4 +51,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/awayTeamName" />
 
+    <FrameLayout
+        android:id="@+id/penalty_fragment_container"
+        android:layout_width="361dp"
+        android:layout_height="302dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <fragment
+            android:id="@+id/penalty_list"
+            android:name="cpsc4150.allaroundclemson.PenaltyListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

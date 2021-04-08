@@ -24,7 +24,8 @@ public class PenaltyListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-         View view = inflater.inflate(R.layout.penalty_fragment_list, container, false);
+         View view = inflater.inflate(R.layout.fragment_penalty_list, container, false);
+
          RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.penalty_recycler_view);
          recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -42,7 +43,7 @@ public class PenaltyListFragment extends Fragment {
         public PenaltyHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_penalty, parent, false));
             itemView.setOnClickListener(this);
-            mTextView = (TextView) itemView.findViewById(R.id.penaltyName);
+            mTextView = (TextView) itemView.findViewById(R.id.penaltyNameList);
         }
 
         public void bind(Penalty penalty){

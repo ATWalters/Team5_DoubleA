@@ -37,7 +37,6 @@ public class PenaltyDescriptionFragment extends Fragment {
 
         TextView descriptionTextView = view.findViewById(R.id.penaltyDesc);
         descriptionTextView.setText(getString(R.string.penaltyDesc, mPenalty.getName(), mPenalty.getDescription()));
-        //TODO: Add stuff for API call
 
         return view;
     }

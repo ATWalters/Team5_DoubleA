@@ -9,11 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllAroundClemson">
-
-        <activity android:name=".PenaltyDescActivity">
-        </activity>
-        <activity android:name=".PenaltyListActivity">
-        </activity>
         <activity android:name=".SportsActivity">
         </activity>
 

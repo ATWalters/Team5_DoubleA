@@ -10,6 +10,7 @@
     <string name="homeScore">0</string>
     <string name="awayScore">0</string>
 
+    <string name="penaltyHolder">penalty</string>
     <string-array name="penalty_name">
         <item>Blocking below the waist</item>
         <item>Block in the back</item>

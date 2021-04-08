@@ -6,9 +6,13 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class SportsActivity extends AppCompatActivity implements PenaltyListFragment.OnPenaltySelectedListener{
-    public static String EXTRA_PENALTY_ID = "penaltyId";
+public class SportsActivity extends AppCompatActivity
+        implements PenaltyListFragment.OnPenaltySelectedListener{
     private static final String KEY_PENALTY_ID = "penaltyId";
     private int mPenaltyId;
 
@@ -21,15 +25,25 @@ public class SportsActivity extends AppCompatActivity implements PenaltyListFrag
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentById(R.id.penalty_fragment_container);
 
+        //Testing to make sure this would update textview, leaving commented for now to reference later
+        //TextView homeTeamName = (TextView)findViewById(R.id.homeTeamName);
+        //homeTeamName.setText(getString(R.string.homeTeam));
+
+        //TODO: Add call to functions that handle API stuff
+
         if(fragment == null){
             fragment = new PenaltyListFragment();
-            fragmentManager.beginTransaction().add(R.id.penalty_fragment_container, fragment).commit();
+            fragmentManager.beginTransaction()
+                    .add(R.id.penalty_fragment_container, fragment)
+                    .commit();
         }
 
         if(savedInstanceState != null && savedInstanceState.getInt(KEY_PENALTY_ID) != 0){
             mPenaltyId = savedInstanceState.getInt(KEY_PENALTY_ID);
             Fragment penaltyFragment = PenaltyDescriptionFragment.newInstance(mPenaltyId);
-            getSupportFragmentManager().beginTransaction().replace(R.id.penalty_fragment_container, penaltyFragment).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.penalty_fragment_container, penaltyFragment)
+                    .commit();
         }
     }
 
@@ -52,8 +66,11 @@ public class SportsActivity extends AppCompatActivity implements PenaltyListFrag
             startActivity(intent);
         }else{
             Fragment penaltyFragment = PenaltyDescriptionFragment.newInstance(penaltyId);
-            getSupportFragmentManager().beginTransaction().replace(R.id.desc_fragment_container, penaltyFragment).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.desc_fragment_container, penaltyFragment)
+                    .commit();
 
         }
     }
+
 }

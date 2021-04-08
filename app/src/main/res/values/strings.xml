@@ -6,7 +6,7 @@
     <string name="gameTitle">Trivia Game</string>
 
     <string name="homeTeam">Clemson</string>
-    <string name="awayTeam">%1$s</string>
+    <string name="awayTeam">Opponent</string>
     <string name="homeScore">0</string>
     <string name="awayScore">0</string>
 

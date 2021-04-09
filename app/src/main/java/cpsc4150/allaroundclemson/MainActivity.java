@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent();
-                startActivity(intent);
+                startMapsView();
             }
 
         });
@@ -45,8 +44,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent();
-                startActivity(intent);
+                startSportsView();
             }
 
         });
@@ -56,13 +54,10 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent();
-                startActivity(intent);
+                startGameView();
             }
 
         });
-
-
 
     }
 
@@ -73,9 +68,38 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
 
     @Override
     public void applyProfile(int profile){
-        int profileChoice = profile;
-        Intent intent = new Intent(this, profile.class);
-        intent.putExtra("PROFILE", profileChoice);
-        startActivity(intent);
+        if(profile == 0){
+            Intent myIntent = new Intent(this, prospectiveStudent.class);
+            startActivity(myIntent);
+
+        }else if(profile ==1){
+            Intent myIntent = new Intent(this, currentStudent.class);
+            startActivity(myIntent);
+
+        }else if(profile == 2){
+            Intent myIntent = new Intent(this, alumni.class);
+            startActivity(myIntent);
+
+        }else if (profile == 3){
+            Intent myIntent = new Intent(this, fan.class);
+            startActivity(myIntent);
+
+        }
     }
+
+    public void startGameView(){
+        Intent myIntent = new Intent(this, gameandicons.class);
+        startActivity(myIntent);
+    }
+
+    public void startSportsView(){
+        //Intent myIntent = new Intent(this, /sports view);
+        //startActivity(myIntent);
+    }
+
+    public void startMapsView(){
+        //Intent myIntent = new Intent(this, /maps view);
+        //startActivity(myIntent);
+    }
+
 }

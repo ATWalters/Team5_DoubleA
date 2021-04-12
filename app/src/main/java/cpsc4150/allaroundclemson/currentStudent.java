@@ -24,10 +24,9 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         setContentView(R.layout.activity_currentstudentprofile);
 
         recyclerView = findViewById(R.id.rvClasses);
-        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         adapter = new clemsonClassAdapter(items, this);
+        recyclerView.setAdapter(adapter);
 
         btn = findViewById(R.id.addClass);
 

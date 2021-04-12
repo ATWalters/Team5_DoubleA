@@ -15,11 +15,13 @@ import java.util.ArrayList;
 
 public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapter.ViewHolder> {
 
-    private ArrayList<clemsonClass> listClemsonClasses = new ArrayList<>();
-    private Context context;
+    private ArrayList<clemsonClass> listClemsonClasses;
+    private LayoutInflater mInflator;
+
     public clemsonClassAdapter(ArrayList<clemsonClass> listItemTexts, Context context) {
         this.listClemsonClasses = listItemTexts;
-        this.context = context;
+        this.mInflator = LayoutInflater.from(context);
+
     }
 
     public void add(clemsonClass content) {
@@ -30,26 +32,23 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
     public void remove(int position) {
 
         clemsonClass remove = listClemsonClasses.remove(position);
+        listClemsonClasses.remove(remove);
+        notifyDataSetChanged();
     }
 
-    @NonNull
+
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recyclerview_classlayout, viewGroup, false);
-        ViewHolder holder = new ViewHolder(view);
-        return holder;
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
+        View view = mInflator.inflate(R.layout.recyclerview_classlayout, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder holder,  int i) {
         clemsonClass current = listClemsonClasses.get(i);
-        viewHolder.listItem.setText(current.getName());
-        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        String className = current.getName();
+        String classCode = current.getClassCode();
+        holder.listItem.setText(className + " " + classCode);
     }
 
     @Override
@@ -60,12 +59,12 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView listItem;
-        RelativeLayout parentLayout;
+        //RelativeLayout parentLayout;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             listItem = itemView.findViewById(R.id.textview1);
-            parentLayout = itemView.findViewById(R.id.classLayout);
+            //parentLayout = itemView.findViewById(R.id.classLayout);
         }
     }
 }

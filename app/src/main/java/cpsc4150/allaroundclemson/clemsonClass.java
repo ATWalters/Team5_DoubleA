@@ -6,11 +6,11 @@ public class clemsonClass {
     private int section;
     private int time;
 
-    clemsonClass(String Mname, String MclassCode, int Msection, int Mtime){
-        name = Mname;
-        classCode = MclassCode;
-        section = Msection;
-        time = Mtime;
+    public clemsonClass(String Mname, String MclassCode, int Msection, int Mtime){
+        this.name = Mname;
+        this.classCode = MclassCode;
+        this.section = Msection;
+        this.time = Mtime;
     }
 
     public int getSection() {

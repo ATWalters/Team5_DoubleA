@@ -5,10 +5,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
@@ -31,28 +34,36 @@ public class classInfoDialog extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.layout_classinfodialog, null);
 
 
+
         builder.setView(view)
                 .setTitle("Class Information")
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
                 .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         className = ((EditText) view.findViewById(R.id.className)).getText().toString();
+                        className = className.toUpperCase();
                         classCode = ((EditText) view.findViewById(R.id.classCode)).getText().toString();
                         String SclassSection = ((EditText) view.findViewById(R.id.classSection)).getText().toString();
                         classSection = Integer.parseInt(SclassSection);
                         String SclassTime = ((EditText) view.findViewById(R.id.classTime)).getText().toString();
                         classTime = Integer.parseInt(SclassTime);
 
-                        listener.applyClassinfo(className, classCode, classSection, classSection);
-                        dialog.dismiss();
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+                        if (checkInfo(className, classCode, classSection, classSection)){
+                            listener.applyClassinfo(className, classCode, classSection, classSection);
+                            dialog.dismiss();
+                        }else{
+
+                        }
+
                     }
                 });
+
         return builder.create();
     }
 
@@ -65,5 +76,38 @@ public class classInfoDialog extends AppCompatDialogFragment {
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString() + "must implement classInfoDialogListener");
         }
+    }
+
+    public boolean checkInfo(String name, String code, int Section, int time){
+        boolean classPassed = false;
+        AlertDialog dialog = (AlertDialog) getDialog();
+
+        String[] classOptions = getResources().getStringArray(R.array.class_nicknames);
+        int size = classOptions.length;
+        Log.d("Size of Array", Integer.toString(size));
+       for(int i = 0; i < classOptions.length; i++){
+            if(name.equals(classOptions[i])){
+                classPassed =true;
+            }
+
+        }
+
+       boolean codePassed = false;
+
+       if (Integer.valueOf(code) >=1000 && Integer.valueOf(code) < 10000  ){
+           codePassed = true;
+       }
+
+       if(codePassed && classPassed){
+           return true;
+       }else if(!codePassed){
+            Toast.makeText(getContext(), "Code should be between 1000 and 9999", Toast.LENGTH_SHORT).show();
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+        }else if(!classPassed){
+           Toast.makeText(getContext(), name + " is not a class nickname", Toast.LENGTH_SHORT).show();
+           dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+       }
+
+        return false;
     }
 }

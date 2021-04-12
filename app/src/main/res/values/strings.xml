@@ -4,4 +4,245 @@
     <string name="mapTitle">Campus Map</string>
     <string name="sportsTitle">Sports</string>
     <string name="gameTitle">Trivia Game</string>
+    <string name="prospectiveLink">
+        <a href="https://www.clemson.edu/admissions/applying-to-clemson/freshman-students.html">Link to more information</a>
+    </string>
+
+    <string name="alumniLink">
+        <a href="https://alumni.clemson.edu/">Alumni Information</a>
+    </string>
+
+    <string name="footballLink">
+        <a href="https://clemsontigers.com/sports/football/schedule/">Football Schedule</a>
+    </string>
+
+    <string name="baseballLink">
+        <a href="https://clemsontigers.com/sports/baseball/schedule/">Baseball Schedule</a>
+    </string>
+
+    <string name="softballLink">
+        <a href="https://clemsontigers.com/sports/softball/schedule/">Softball Schedule</a>
+    </string>
+
+    <string name="mensBBLink">
+        <a href="https://clemsontigers.com/sports/mens-basketball/schedule/season/2020/table/">Men\'s Basketball Schedule</a>
+    </string>
+
+    <string name="womensBBLink">
+        <a href="https://clemsontigers.com/sports/w-basketball/schedule/">Women\'s Basketball Schedule</a>
+    </string>
+
+    <string name="mensoccerLink">
+        <a href="https://clemsontigers.com/sports/mens-soccer/schedule/">Men\'s Soccer Schedule</a>
+    </string>
+
+    <string name="womensoccerLink">
+        <a href="https://clemsontigers.com/sports/womens-soccer/schedule/">Women\'s Soccer Schedule</a>
+    </string>
+
+    <string name="mentennisLink">
+        <a href="https://clemsontigers.com/sports/mens-tennis/schedule/">Men\'s Tennis Schedule</a>
+    </string>
+
+    <string name="womentennisLink">
+        <a href="https://clemsontigers.com/sports/womens-tennis/schedule/">Women\'s Tennis Schedule</a>
+    </string>
+
+    <string name="mensgolfLink">
+        <a href="https://clemsontigers.com/sports/mens-golf/schedule/">Men\'s Golf Schedule</a>
+    </string>
+
+    <string name="womensgolfLink">
+        <a href="https://clemsontigers.com/sports/womens-golf/schedule/">Women\'s Golf Schedule</a>
+    </string>
+
+
+
+
+
+
+
+    <string-array name="class_nicknames">
+        <item>AAH</item>
+        <item>ACCT</item>
+        <item>AFLS</item>
+        <item>AGED</item>
+        <item>AGM</item>
+        <item>AGRB</item>
+        <item>AL</item>
+        <item>AMFG</item>
+        <item>ANTH</item>
+        <item>APEC</item>
+        <item>ARAB</item>
+        <item>ARCH</item>
+        <item>ART</item>
+        <item>AS</item>
+        <item>ASL</item>
+        <item>ASTR</item>
+        <item>AUD</item>
+        <item>AUE</item>
+        <item>AVS</item>
+        <item>BCHM</item>
+        <item>BE</item>
+        <item>BIOE</item>
+        <item>BIOL</item>
+        <item>BIOS</item>
+        <item>BMOL</item>
+        <item>BOT</item>
+        <item>BSHS</item>
+        <item>BUS</item>
+        <item>CAAH</item>
+        <item>CE</item>
+        <item>CES</item>
+        <item>CH</item>
+        <item>CHE</item>
+        <item>CHIN</item>
+        <item>CME</item>
+        <item>COMM</item>
+        <item>COOP</item>
+        <item>CPSC</item>
+        <item>CRD</item>
+        <item>CRE</item>
+        <item>CRP</item>
+        <item>CSEN</item>
+        <item>CSM</item>
+        <item>CTE</item>
+        <item>CU</item>
+        <item>CVT</item>
+        <item>DANC</item>
+        <item>DPA</item>
+        <item>DSA</item>
+        <item>DSGN</item>
+        <item>EAS</item>
+        <item>ECAS</item>
+        <item>ECE</item>
+        <item>ECON</item>
+        <item>ED</item>
+        <item>EDC</item>
+        <item>EDEC</item>
+        <item>EDEL</item>
+        <item>EDF</item>
+        <item>EDHD</item>
+        <item>EDIS</item>
+        <item>EDL</item>
+        <item>EDLT</item>
+        <item>EDML</item>
+        <item>EDSA</item>
+        <item>EDSC</item>
+        <item>EDSP</item>
+        <item>EES</item>
+        <item>EG</item>
+        <item>ELE</item>
+        <item>ELEC</item>
+        <item>EM</item>
+        <item>ENGL</item>
+        <item>ENGR</item>
+        <item>ENR</item>
+        <item>ENSP</item>
+        <item>ENT</item>
+        <item>ENTR</item>
+        <item>ESED</item>
+        <item>ETOX</item>
+        <item>FCS</item>
+        <item>FDSC</item>
+        <item>FDTH</item>
+        <item>FIN</item>
+        <item>FNR</item>
+        <item>FOR</item>
+        <item>FR</item>
+        <item>GC</item>
+        <item>GEN</item>
+        <item>GEOG</item>
+        <item>GEOL</item>
+        <item>GER</item>
+        <item>GRAD</item>
+        <item>GW</item>
+        <item>HCC</item>
+        <item>HCG</item>
+        <item>HEHD</item>
+        <item>HIST</item>
+        <item>HLTH</item>
+        <item>HON</item>
+        <item>HORT</item>
+        <item>HP</item>
+        <item>HRD</item>
+        <item>HSPV</item>
+        <item>HUM</item>
+        <item>IE</item>
+        <item>INNO</item>
+        <item>INT</item>
+        <item>IPM</item>
+        <item>IS</item>
+        <item>ITAL</item>
+        <item>JAPN</item>
+        <item>JUST</item>
+        <item>LANG</item>
+        <item>LARC</item>
+        <item>LATN</item>
+        <item>LAW</item>
+        <item>LIB</item>
+        <item>LIH</item>
+        <item>LIT</item>
+        <item>LS</item>
+        <item>MATH</item>
+        <item>MBA</item>
+        <item>ME</item>
+        <item>MGT</item>
+        <item>MHA</item>
+        <item>MICR</item>
+        <item>MKT</item>
+        <item>ML</item>
+        <item>MSE</item>
+        <item>MTSA</item>
+        <item>MUSC</item>
+        <item>NPL</item>
+        <item>NURS</item>
+        <item>NUTR</item>
+        <item>PA</item>
+        <item>PADM</item>
+        <item>PAS</item>
+        <item>PCPC</item>
+        <item>PDBE</item>
+        <item>PES</item>
+        <item>PFC</item>
+        <item>PHIL</item>
+        <item>PHSC</item>
+        <item>PHYS</item>
+        <item>PKSC</item>
+        <item>PKSC</item>
+        <item>PLPA</item>
+        <item>PLPH</item>
+        <item>PORT</item>
+        <item>POSC</item>
+        <item>POST</item>
+        <item>PRTM</item>
+        <item>PSYC</item>
+        <item>PTC</item>
+        <item>RCID</item>
+        <item>READ</item>
+        <item>RED</item>
+        <item>REL</item>
+        <item>RS</item>
+        <item>RUD</item>
+        <item>RUSS</item>
+        <item>SAP</item>
+        <item>SOC</item>
+        <item>SPAN</item>
+        <item>SSCS</item>
+        <item>STAT</item>
+        <item>STS</item>
+        <item>SUST</item>
+        <item>SYSE</item>
+        <item>TEXT</item>
+        <item>THEA</item>
+        <item>THRD</item>
+        <item>TSAP</item>
+        <item>TTT</item>
+        <item>VTED</item>
+        <item>WCIN</item>
+        <item>WFB</item>
+        <item>WS</item>
+        <item>YDL</item>
+        <item>YDP</item>
+    </string-array>
 </resources>

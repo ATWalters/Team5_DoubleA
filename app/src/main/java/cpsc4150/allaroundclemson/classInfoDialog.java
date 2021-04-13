@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class classInfoDialog extends AppCompatDialogFragment {
 
     public interface classInfoDialogListener {
@@ -52,7 +56,7 @@ public class classInfoDialog extends AppCompatDialogFragment {
                         String SclassSection = ((EditText) view.findViewById(R.id.classSection)).getText().toString();
                         classSection = Integer.parseInt(SclassSection);
                         String SclassTime = ((EditText) view.findViewById(R.id.classTime)).getText().toString();
-                        classTime = Integer.parseInt(SclassTime);
+
 
                         if (checkInfo(className, classCode, classSection, classSection)){
                             listener.applyClassinfo(className, classCode, classSection, classSection);
@@ -98,13 +102,26 @@ public class classInfoDialog extends AppCompatDialogFragment {
            codePassed = true;
        }
 
-       if(codePassed && classPassed){
+       boolean sectionPassed = false;
+
+       if(Section > 0 && Section < 100){
+           sectionPassed = true;
+       }
+
+       boolean timePassed = false;
+
+
+
+       if(codePassed && classPassed && sectionPassed){
            return true;
        }else if(!codePassed){
             Toast.makeText(getContext(), "Code should be between 1000 and 9999", Toast.LENGTH_SHORT).show();
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
         }else if(!classPassed){
            Toast.makeText(getContext(), name + " is not a class nickname", Toast.LENGTH_SHORT).show();
+           dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+       }else if(!sectionPassed){
+           Toast.makeText(getContext(), Section + " is not a section", Toast.LENGTH_SHORT).show();
            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
        }
 

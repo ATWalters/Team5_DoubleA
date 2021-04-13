@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class currentStudent extends AppCompatActivity implements classInfoDialog.classInfoDialogListener {
+public class currentStudent extends AppCompatActivity implements classInfoDialog.classInfoDialogListener, deleteInfoDialog.deleteInfoDialogListener {
     private ArrayList<clemsonClass> items = new ArrayList<>();
     private Button btn;
+    private Button deleteBtn;
     RecyclerView recyclerView;
     clemsonClassAdapter adapter;
 
@@ -33,10 +34,19 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //dialog box yay
                 openClassDialog();
             }
         });
+
+        deleteBtn = findViewById(R.id.removeClass);
+
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDeleteDialog();
+            }
+        });
+
     }
 
     @Override
@@ -49,5 +59,16 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
     public void openClassDialog(){
         classInfoDialog infoDialog = new classInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "classInfoDialog");
+    }
+
+    @Override
+    public void deleteClassinfo(String name, String code) {
+
+        adapter.remove(name, code);
+    }
+
+    public void openDeleteDialog(){
+        deleteInfoDialog infoDialog = new deleteInfoDialog();
+        infoDialog.show(getSupportFragmentManager(), "deleteInfoDialog");
     }
 }

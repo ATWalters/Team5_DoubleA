@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RadioGroup
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:contentDescription="allows you to pick a color pig icon"
+            android:id="@+id/profile_choice"
+            android:orientation="vertical"
+            android:onClick="onCheckedChanged">
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="choice for prospective student"
+                android:id="@+id/ProspectiveStudent"
+                android:checked="true"
+                android:text="Prospective Student"/>
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="choice for cureent student"
+                android:id="@+id/CurrentStudent"
+                android:checked="false"
+                android:text="Current Student"/>
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="choice for alumni"
+                android:id="@+id/Alumni"
+                android:checked="false"
+                android:text="Alumni"/>
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="choice for fan"
+                android:id="@+id/fan"
+                android:checked="false"
+                android:text="Fan"/>
+
+        </RadioGroup>
+
+</RelativeLayout>

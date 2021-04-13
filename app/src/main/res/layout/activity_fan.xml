@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/profileLayout"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fan"
+                    android:textAlignment="center"
+                    android:textSize="50sp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/profileType"
+                    android:textColor="@color/orange"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/footballLink"
+                    android:textSize="30sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:textColorLink="@color/white"
+                    android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/baseballLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/softballLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mensBBLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/womensBBLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mensoccerLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/womensoccerLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mentennisLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/womentennisLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mensgolfLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/womentennisLink"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/white"
+                android:background="@color/orange"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

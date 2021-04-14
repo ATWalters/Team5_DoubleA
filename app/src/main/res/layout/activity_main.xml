@@ -60,14 +60,14 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="360dp"
         app:cardBackgroundColor="@color/orange"
-        android:onClick="sports">
+        >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:src="@drawable/football"
-            android:onClick="sports"/>
+            />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

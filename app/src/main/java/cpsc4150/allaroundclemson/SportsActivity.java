@@ -5,30 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Toast;
+
+import com.android.volley.VolleyError;
 
 
 public class SportsActivity extends AppCompatActivity
         implements PenaltyListFragment.OnPenaltySelectedListener{
     private static final String KEY_PENALTY_ID = "penaltyId";
     private int mPenaltyId;
+    private SportsFetcher mSportsFetcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
 
-        mPenaltyId = -1;
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fragment = fragmentManager.findFragmentById(R.id.penaltyFragmentContainer);
 
         //Testing to make sure this would update textview, leaving commented for now to reference later
         //TextView homeTeamName = (TextView)findViewById(R.id.homeTeamName);
         //homeTeamName.setText(getString(R.string.homeTeam));
 
         //TODO: Add call to functions that handle API stuff
+        mSportsFetcher = new SportsFetcher(this);
+        mSportsFetcher.fetchCurrentGames(mFetchListener);
+
+        mPenaltyId = -1;
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentById(R.id.penaltyFragmentContainer);
 
         if(fragment == null){
             fragment = new PenaltyListFragment();
@@ -45,6 +54,30 @@ public class SportsActivity extends AppCompatActivity
                     .commit();
         }
     }
+
+    private SportsFetcher.OnSportsDataReceivedListener mFetchListener = new SportsFetcher.OnSportsDataReceivedListener() {
+        @Override
+        public void onCurrentGamesReceived(Boolean isGame) {
+            if(isGame){
+                //Add code to see if Clemson is playing
+                /*if(clemsonPlaying){
+                     //Add code to get score of Clemson game
+                 }*/
+            }
+            //Display text in a toast saying Clemson is not playing a game right now or something
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_LONG;
+            String text = "Clemson is not playing a game right now";
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.setGravity(Gravity.CENTER|Gravity.CENTER_VERTICAL, 0, 0);
+            toast.show();
+        }
+
+        @Override
+        public void onErrorResponse(VolleyError error) {
+
+        }
+    };
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle savedInstanceState){

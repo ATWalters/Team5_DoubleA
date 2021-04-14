@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 
 public class SportsActivity extends AppCompatActivity
@@ -71,4 +72,16 @@ public class SportsActivity extends AppCompatActivity
         }
     }
 
+
+    public void back_to_list_btn(View view) {
+        setContentView(R.layout.activity_sports);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment;
+
+        fragment = new PenaltyListFragment();
+        fragmentManager.beginTransaction()
+                .replace(R.id.penaltyFragmentContainer, fragment)
+                .commit();
+    }
 }

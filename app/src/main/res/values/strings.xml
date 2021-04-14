@@ -255,6 +255,7 @@
     <string name="penaltyDescName">%1$s</string>
     <string name="penaltyDesc">%1$s</string>
     <string name="clickBelow">Click a penalty below for a description of what it means.</string>
+    <string name="back_to_list">Back to list</string>
 
     <string-array name="penalty_name">
         <item>Blocking below the waist</item>

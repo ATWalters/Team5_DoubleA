@@ -57,11 +57,6 @@
     </string>
 
 
-
-
-
-
-
     <string-array name="class_nicknames">
         <item>AAH</item>
         <item>ACCT</item>
@@ -245,4 +240,6 @@
         <item>YDL</item>
         <item>YDP</item>
     </string-array>
+
+
 </resources>

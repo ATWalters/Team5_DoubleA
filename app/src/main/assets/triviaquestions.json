@@ -1,0 +1,605 @@
+{
+  "trivia": [
+    {
+      "question": "Where do the cheerleaders wear the 'tiger' rag",
+      "answer": "left wrist",
+      "choices": [
+        {
+          "1":"right wrist",
+          "2":"around the neck",
+          "3":"left wrist",
+          "4":"left ankle"
+        }
+      ]
+    },
+    {
+      "question": "What clock direction should the tiger paw be turned at?",
+      "answer": "1 o'clock",
+      "choices": [
+        {
+          "1":"12 o'clock",
+          "2":"3 o'clock",
+          "3":"7 o'clock",
+          "4":"1 o'clock"
+        }
+      ]
+    },
+    {
+      "question": "What famous game day restaurant used to be a gas station?",
+      "answer": "Esso Club",
+      "choices": [
+        {
+          "1":"Tiger Town Tarven",
+          "2":"Esso Club",
+          "3":"TD's of Clemson",
+          "4":"Smoking Pig"
+        }
+      ]
+    },
+    {
+      "question": "What is the official name of the Clemson Football stadium?",
+      "answer": "Memorial Stadium",
+      "choices": [
+        {
+          "1":"Death Valley",
+          "2":"Memorial Stadium",
+          "3":"Tiger Stadium",
+          "4":"SC Stadium"
+        }
+      ]
+    },
+    {
+      "question": "What color do students and faculty wear on Fridays?",
+      "answer": "orange",
+      "choices": [
+        {
+          "1":"white",
+          "2":"purple",
+          "3":"orange",
+          "4":"black"
+        }
+      ]
+    },
+    {
+      "question": "The statue in front of what building can you not read the words on till you graduate?",
+      "answer": "Tillman Hall",
+      "choices": [
+        {
+          "1":"Tillman Hall",
+          "2":"Kinard Hall",
+          "3":"Bracket Hall",
+          "4":"Sirrine Hall"
+        }
+      ]
+    },
+    {
+      "question": "What year was Clemson Founded?",
+      "answer": "1889",
+      "choices": [
+        {
+          "1":"1850",
+          "2":"1932",
+          "3":"1889",
+          "4":"1899"
+        }
+      ]
+    },
+    {
+      "question": "Who is the current President of the university?",
+      "answer": "James P. Clements",
+      "choices": [
+        {
+          "1":"James P. Clements",
+          "2":"Dabo Swinney",
+          "3":"Robert H. Jones",
+          "4":"Max Allen"
+        }
+      ]
+    },
+    {
+      "question": "When year were females able to enroll into Clemson University?",
+      "answer": "1962",
+      "choices": [
+        {
+          "1":"2000",
+          "2":"1978",
+          "3":"1962",
+          "4":"1970"
+        }
+      ]
+    },
+    {
+      "question": "What did the class of 1915 gift to the University?",
+      "answer": "Clemson Ampitheater",
+      "choices": [
+        {
+          "1":"Library Bridge",
+          "2":"Clemson Ampitheater",
+          "3":"Tiger Statue",
+          "4":"The Carillion Bell"
+        }
+      ]
+    },
+    {
+      "question": "What were Clemson's first school colors?",
+      "answer": "red and blue",
+      "choices": [
+        {
+          "1":"red and blue",
+          "2":"orange and purple",
+          "3":"orange and blue",
+          "4":"white and orange"
+        }
+      ]
+    },
+    {
+      "question": "What year did clemson adopt their signature colors orange and purple?",
+      "answer": "1896",
+      "choices": [
+        {
+          "1":"1890",
+          "2":"1900",
+          "3":"1896",
+          "4":"1893"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the student-run paper at Clemson University?",
+      "answer": "The Tiger",
+      "choices": [
+        {
+          "1":"The Roar",
+          "2":"Clemson Tiger",
+          "3":"The Tiger",
+          "4":"The Orange and Purple"
+        }
+      ]
+    },
+    {
+      "question": "Who was the longest tenured coach?",
+      "answer": "Frank Howard",
+      "choices": [
+        {
+          "1":"Frank Howard",
+          "2":"Dabo Swinney",
+          "3":"John Heisman",
+          "4":"John P. Clements"
+        }
+      ]
+    },
+    {
+      "question": "How many wins did Frank Howard have?",
+      "answer": "165",
+      "choices": [
+        {
+          "1":"101",
+          "2":"65",
+          "3":"165",
+          "4":"143"
+        }
+      ]
+    },
+    {
+      "question": "What is the Mascot of Clemson University?",
+      "answer": "the tiger",
+      "choices": [
+        {
+          "1":"baby tiger",
+          "2":"the tiger",
+          "3":"orange ball",
+          "4":"football"
+        }
+      ]
+    },
+    {
+      "question": "What lake does Clemson University sit next to?",
+      "answer": "Lake Hartwell",
+      "choices": [
+        {
+          "1":"Lake Hartwell",
+          "2":"Lake Jocasse",
+          "3":"Lake Murray",
+          "4":"Lake Wateree"
+        }
+      ]
+    },
+    {
+      "question": "What mountains is Clemson University located in the foothills of??",
+      "answer": "Blue Ridge Mountains",
+      "choices": [
+        {
+          "1":"Clemson Mounain",
+          "2":"Mauldin Mountain",
+          "3":"Blue Ridge Mountains",
+          "4":"Walnut Mountains"
+        }
+      ]
+    },
+    {
+      "question": "What song is sung at the end of every sports event?",
+      "answer": "Alma Mater",
+      "choices": [
+        {
+          "1":"Alma Mater",
+          "2":"Tiger Rag",
+          "3":"Roar",
+          "4":"We are the Champions"
+        }
+      ]
+    },
+    {
+      "question": "What is the official logo of Clemson University?",
+      "answer": "Tiger Paw",
+      "choices": [
+        {
+          "1":"The Tiger",
+          "2":"Tiger Paw",
+          "3":"Palmetto Tree",
+          "4":"a C"
+        }
+      ]
+    },
+    {
+      "question": "What is one of the nation's largest student run pep rallies??",
+      "answer": "Tigerama",
+      "choices": [
+        {
+          "1":"Tigerama",
+          "2":"Homecoming",
+          "3":"First Friday",
+          "4":"Tiger Rally"
+        }
+      ]
+    },
+    {
+      "question": "What does the tiger mascot perform after every touchdown?",
+      "answer": "Push-ups",
+      "choices": [
+        {
+          "1":"Jumping Jacks",
+          "2":"Squats",
+          "3":"Push-ups",
+          "4":"Pull-ups"
+        }
+      ]
+    },
+    {
+      "question": "What occurs for 24 hours the day before the Clemson-Carolina rivalry game?",
+      "answer": "Banging of a drum in Death Valley",
+      "choices": [
+        {
+          "1":"Banging of a drum in Death Valley",
+          "2":"Cocky's Funeral",
+          "3":"Prayer Service",
+          "4":"Food Preparation"
+        }
+      ]
+    },
+    {
+      "question": "What does the C surround on the Clemson ring?",
+      "answer": "Palmetto Tree",
+      "choices": [
+        {
+          "1":"Clemson Paw",
+          "2":"Outline of South Carolina State",
+          "3":"Palmetto Tree",
+          "4":"Year you Graduate"
+        }
+      ]
+    },
+    {
+      "question": "What has been dubbed \"the most exicting 25 seconds in college football\"?",
+      "answer": "running down \"The Hill\"",
+      "choices": [
+        {
+          "1":"running down \"The Hill\"",
+          "2":"The Tiger Rag",
+          "3":"Cadence Count",
+          "4":"First Kick"
+        }
+      ]
+    },
+    {
+      "question": "When was the first First Friday Parade held?",
+      "answer": "1974",
+      "choices": [
+        {
+          "1":"1957",
+          "2":"1966",
+          "3":"1974",
+          "4":"1953"
+        }
+      ]
+    },
+    {
+      "question": "What year did Tigerama start?",
+      "answer": "1957",
+      "choices": [
+        {
+          "1":"1966",
+          "2":"1957",
+          "3":"1964",
+          "4":"1980"
+        }
+      ]
+    },
+    {
+      "question": "Who is Howard's Rock named after?",
+      "answer": "Frank Howard",
+      "choices": [
+        {
+          "1":"Frank Howard",
+          "2":"Dabo Swinney",
+          "3":"Howard Frank",
+          "4":"John Howard"
+        }
+      ]
+    },
+    {
+      "question": "When was Howard's Rock first placed at the top of \"The Hill\"?",
+      "answer": "1966",
+      "choices": [
+        {
+          "1":"1969",
+          "2":"1966",
+          "3":"1950",
+          "4":"1975"
+        }
+      ]
+    },
+    {
+      "question": "What do the football players rub before every home game?",
+      "answer": "Howard's Rock",
+      "choices": [
+        {
+          "1":"Dabo's Head",
+          "2":"Memorial Stadium",
+          "3":"The paw in front of the stadium",
+          "4":"Howard's Rock"
+        }
+      ]
+    },
+    {
+      "question": "What year did the \"Tiger Rag\" began playing?",
+      "answer": "1942",
+      "choices": [
+        {
+          "1":"1942",
+          "2":"1956",
+          "3":"1977",
+          "4":"1930"
+        }
+      ]
+    },
+    {
+      "question": "When was the first meeting between Clemson and Alabama?",
+      "answer": "1900",
+      "choices": [
+        {
+          "1":"1910",
+          "2":"2015",
+          "3":"1900",
+          "4":"1948"
+        }
+      ]
+    },
+    {
+      "question": "When was the first meeting between Clemson and Alabama?",
+      "answer": "1981, 2016, 2018",
+      "choices": [
+        {
+          "1":"1981, 2016, 2018",
+          "2":"2016, 2018",
+          "3":"1981, 2017, 2019",
+          "4":"none"
+        }
+      ]
+    },
+    {
+      "question": "What was Clemson University originally named?",
+      "answer": "Clemson Agricultural College",
+      "choices": [
+        {
+          "1":"Military Clemson College",
+          "2":"Clemson  Academy",
+          "3":"Argicultural South Carolina College",
+          "4":"Clemson Agricultural College"
+        }
+      ]
+    },
+    {
+      "question": "What years did John Heisman coach Clemson?",
+      "answer": "1900-1903",
+      "choices": [
+        {
+          "1":"1901-1910",
+          "2":"1950-1955",
+          "3":"1900-1903",
+          "4":"1903-1904"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the field the soccer team plays on?",
+      "answer": "Riggs Field",
+      "choices": [
+        {
+          "1":"Noonan Field",
+          "2":"Riggs Field",
+          "3":"Ibrahim Stadium",
+          "4":"Historic Field"
+        }
+      ]
+    },
+    {
+      "question": "Where do the Clemson basketball team play their home games?",
+      "answer": "LittleJohn Coliseum",
+      "choices": [
+        {
+          "1":"LittleJohn Coliseum",
+          "2":"Death Coliseum",
+          "3":"Brownell Coliseum",
+          "4":"Tiger Coliseum"
+        }
+      ]
+    },
+    {
+      "question": "Where state is Clemson University in?",
+      "answer": "South Carolina",
+      "choices": [
+        {
+          "1":"North Carolina",
+          "2":"South Carolina",
+          "3":"Georgia",
+          "4":"Florida"
+        }
+      ]
+    },
+    {
+      "question": "What team did Clemson beat in the 1981 National Championship?",
+      "answer": "Nebraska",
+      "choices": [
+        {
+          "1":"Alabama",
+          "2":"LSU",
+          "3":"Ohio State",
+          "4":"Nebraska"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the Clemson Tigers' fight song?",
+      "answer": "Tiger Rag",
+      "choices": [
+        {
+          "1":"Alma Mater",
+          "2":"Tiger Rag",
+          "3":"Candence Count",
+          "4":"Clemson Chant"
+        }
+      ]
+    },
+    {
+      "question": "What conference is Clemson in?",
+      "answer": "ACC",
+      "choices": [
+        {
+          "1":"ACC",
+          "2":"SEC",
+          "3":"Pac-12",
+          "4":"Big Ten"
+        }
+      ]
+    },
+    {
+      "question": "Clemson's rivalry with the South Carolina Gamecocks is known as what?",
+      "answer": "The Battle of the Palmetto State",
+      "choices": [
+        {
+          "1":"The South Carolina Game",
+          "2":"USC vs Clemson",
+          "3":"Chicken vs Tiger",
+          "4":"The Battle of the Palmetto State"
+        }
+      ]
+    },
+    {
+      "question": "What is the nickname of the Clemson Tigers marching band?",
+      "answer": "Tiger Band",
+      "choices": [
+        {
+          "1":"The Roar",
+          "2":"Tiger Children",
+          "3":"Tiger Band",
+          "4":"The Band"
+        }
+      ]
+    },
+    {
+      "question": "What do fans bring with them as a tradition when attending away games?",
+      "answer": "$2 dollar bills stamped with Tiger Paws",
+      "choices": [
+        {
+          "1":"Tiger Rag",
+          "2":"$2 dollar bills stamped with Tiger Paws",
+          "3":"Hat",
+          "4":"A Tiger Stuff Animal"
+        }
+      ]
+    },
+    {
+      "question": "Who was the first Clemson Tiger to be inducted into the College Football Hall of Fame?",
+      "answer": "John Heisman",
+      "choices": [
+        {
+          "1":"John Heisman",
+          "2":"C.J. Spiller",
+          "3":"Donnel Woolford",
+          "4":"Sammy Watkins"
+        }
+
+      ]
+    },
+    {
+      "question": "What is said to occur if you take a stroll with your loved one done Lovers' Lane?",
+      "answer": "",
+      "choices": [
+        {
+          "1":"That you will never break up",
+          "2":"nothing",
+          "3":"That you will break up with each other",
+          "4":"That you will marry each other"
+        }
+      ]
+    },
+    {
+      "question": "How do you begin the Cadence Count?",
+      "answer": "C-L-E-M in Cadence Count",
+      "choices": [
+        {
+          "1":"Cadence Let's go",
+          "2":"1-2-3-4",
+          "3":"C-L-E-M in Cadence Count",
+          "4":"Clemson!"
+        }
+      ]
+    },
+    {
+      "question": "What color is worn for Military Appreciation Day?",
+      "answer": "Purple",
+      "choices": [
+        {
+          "1":"White",
+          "2":"Orange",
+          "3":"Purple",
+          "4":"Black"
+        }
+      ]
+    },
+    {
+      "question": "What do many different organizations build on Bowman during homecoming week?",
+      "answer": "Floats",
+      "choices": [
+        {
+          "1": "Floats",
+          "2": "Houses",
+          "3":"Tiger Replicas",
+          "4":"Statues"
+        }
+      ]
+    },
+    {
+      "question": "What is a Clemson Tradition on Black Friday",
+      "answer": "Cocky's Funeral",
+      "choices": [
+        {
+          "1": "Go shopping",
+          "2": "Cocky's Funeral",
+          "3": "Eat Chicken",
+          "4": "Blood Bowl"
+        }
+      ]
+    }
+  ]
+}

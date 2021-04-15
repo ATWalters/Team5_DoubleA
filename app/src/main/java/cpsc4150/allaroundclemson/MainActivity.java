@@ -93,8 +93,8 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
     }
 
     public void startSportsView(){
-        //Intent myIntent = new Intent(this, /sports view);
-        //startActivity(myIntent);
+        Intent myIntent = new Intent(this, SportsActivity.class);
+        startActivity(myIntent);
     }
 
     public void startMapsView(){

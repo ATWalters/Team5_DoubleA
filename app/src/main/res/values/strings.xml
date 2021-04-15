@@ -57,11 +57,6 @@
     </string>
 
 
-
-
-
-
-
     <string-array name="class_nicknames">
         <item>AAH</item>
         <item>ACCT</item>
@@ -409,4 +404,6 @@
             objectionable by the game officials, or by rule. Unsportsmanlike conduct is a non-contact
             foul; if contact is involved it becomes a personal foul.</item>
     </string-array>
+    
+    <string name="title_activity_maps">Map</string>
 </resources>

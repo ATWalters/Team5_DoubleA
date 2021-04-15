@@ -45,45 +45,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //Creating location request
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(5000);
-        mLocationRequest.setFastestInterval(3000);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-
-        //Create location callback
-        mLocationCallback = new LocationCallback(){
-            @Override
-            public void onLocationResult(LocationResult locationResult){
-                if(locationResult != null){
-                    for(Location location : locationResult.getLocations()){
-                        updateMap(location);
-                    }
-                }
-            }
-        };
-
-        mClient = LocationServices.getFusedLocationProviderClient(this);
-    }
-
-    private void updateMap(Location location){
-        //Get user's current location
-        LatLng myLatLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-        //Place a marker at the current location
-        MarkerOptions myMarker = new MarkerOptions()
-                .title("You are here!")
-                .position(myLatLng);
-
-        //Remove previous marker
-        mMap.clear();
-
-        //Add new marker
-        mMap.addMarker(myMarker);
-
-        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(myLatLng, mZoomLevel);
-        mMap.moveCamera(update);
-
     }
     /**
      * Manipulates the map once available.
@@ -102,48 +63,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //adding all of our functionality
 
         // Add a marker in Clemson and move the camera
-        //LatLng clemson = new LatLng(34.6793, -82.8351);
-        //mMap.addMarker(new MarkerOptions().position(clemson).title("Marker in Clemson"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(clemson, 19));
+        LatLng clemson = new LatLng(34.6793, -82.8351);
+        mMap.addMarker(new MarkerOptions().position(clemson).title("Marker in Clemson"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(clemson, 19));
 
-        mMap.setOnCameraMoveListener(new GoogleMap.OnCameraMoveListener(){
-            @Override
-            public void onCameraMove(){
-                CameraPosition cameraPosition = mMap.getCameraPosition();
-                mZoomLevel = cameraPosition.zoom;
-            }
-        });
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mClient.removeLocationUpdates(mLocationCallback);
-    }
-
-    @SuppressLint("MissingPermission")
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        if (hasLocationPermission()) {
-            mClient.requestLocationUpdates(mLocationRequest, mLocationCallback, null);
-        }
-    }
-
-    private boolean hasLocationPermission() {
-
-        // Request fine location permission if not already granted
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(this ,
-                    new String[] { Manifest.permission.ACCESS_FINE_LOCATION },
-                    REQUEST_LOCATION_PERMISSIONS);
-
-            return false;
-        }
-
-        return true;
-    }
 }

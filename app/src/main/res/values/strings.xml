@@ -250,6 +250,8 @@
     <string name="awayTeam">Opponent</string>
     <string name="homeScore">N/A</string>
     <string name="awayScore">N/A</string>
+    <string name="quarter">Quarter: N/A</string>
+    <string name="time">Time remaining: N/A</string>
 
     <string name="penaltyHolder">penalty</string>
     <string name="penaltyDescName">%1$s</string>

@@ -8,11 +8,15 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.VolleyError;
+
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class SportsActivity extends AppCompatActivity
@@ -34,6 +38,8 @@ public class SportsActivity extends AppCompatActivity
         //TODO: Add call to functions that handle API stuff
         mSportsFetcher = new SportsFetcher(this);
         mSportsFetcher.fetchCurrentGames(mFetchListener);
+        Date currentDate = Calendar.getInstance().getTime();
+        Log.e("TIME TEST", currentDate.toString());
 
         mPenaltyId = -1;
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -59,23 +65,21 @@ public class SportsActivity extends AppCompatActivity
         @Override
         public void onCurrentGamesReceived(Boolean isGame) {
             if(isGame){
-                //Add code to see if Clemson is playing
-                /*if(clemsonPlaying){
-                     //Add code to get score of Clemson game
-                 }*/
+
+            }else {
+                //Display text in a toast saying Clemson is not playing a game right now or something
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_LONG;
+                String text = "Clemson is not playing a game right now";
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.setGravity(Gravity.CENTER|Gravity.CENTER_VERTICAL, 0, 0);
+                toast.show();
             }
-            //Display text in a toast saying Clemson is not playing a game right now or something
-            Context context = getApplicationContext();
-            int duration = Toast.LENGTH_LONG;
-            String text = "Clemson is not playing a game right now";
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.setGravity(Gravity.CENTER|Gravity.CENTER_VERTICAL, 0, 0);
-            toast.show();
         }
 
         @Override
         public void onErrorResponse(VolleyError error) {
-
+            Toast.makeText(getApplicationContext(), "Error getting API response. Try again later", Toast.LENGTH_LONG).show();
         }
     };
 

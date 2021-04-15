@@ -63,8 +63,8 @@
 
     <FrameLayout
         android:id="@+id/penaltyFragmentContainer"
-        android:layout_width="361dp"
-        android:layout_height="302dp"
+        android:layout_width="360dp"
+        android:layout_height="249dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,12 +77,37 @@
         style="@style/penaltyHeader"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:text="@string/clickBelow"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeRemainingText" />
+
+    <TextView
+        android:id="@+id/quarterText"
+        style="@style/teamScore"
+        android:layout_width="114dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/quarter"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeTeamScore" />
+
+    <TextView
+        android:id="@+id/timeRemainingText"
+        style="@style/teamScore"
+        android:layout_width="194dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/time"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quarterText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

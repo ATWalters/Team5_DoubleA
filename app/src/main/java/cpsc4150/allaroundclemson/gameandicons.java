@@ -26,6 +26,8 @@ import java.util.List;
 
 public class gameandicons extends AppCompatActivity implements gameInfoDialog.gameInfoDialogListener {
     private Button startBtn;
+    private Button iconBtn;
+
     private String Username;
     private ArrayList<leaderboard> ldboard = new ArrayList<leaderboard>();
     RecyclerView recyclerView;
@@ -36,13 +38,14 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameandicons);
 
-
         recyclerView = findViewById(R.id.rvleaderboard);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new leaderboardAdapter(ldboard, this);
         recyclerView.setAdapter(adapter);
 
         startBtn = findViewById(R.id.startButton);
+        iconBtn = findViewById(R.id.iconsButton);
+
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +60,32 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
             }
         });
 
+        /*
+            Icon button brings you to new page with all the icons
+         */
+
+        iconBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startIconActivity();
+
+            }
+        });
+
+    }
+
+    private void startIconActivity() {
+        Intent myIntent = new Intent(this, icons.class);
+        ArrayList<leaderboard> list = adapter.currentList();
+
+        for(int i = 0; i < list.size(); i++){
+            if ((list.get(i).getScore() >= 8)){
+                myIntent.putExtra("SCORE",list.get(i).getScore());
+                i = list.size();
+            }
+        }
+
+        startActivity(myIntent);
         /*create recyclerview
             has both username and score
          */
@@ -91,7 +120,6 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
                 //ldboard.add(copy);
 
                 adapter.add(copy);
-
 
 
             }

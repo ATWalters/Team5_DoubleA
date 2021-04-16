@@ -67,6 +67,10 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
         return ldScores.size();
     }
 
+    public ArrayList<leaderboard> currentList(){
+        return ldScores;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView listItem;
@@ -77,9 +81,6 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
         }
 
     }
-    
-
-
-
 
 }
+

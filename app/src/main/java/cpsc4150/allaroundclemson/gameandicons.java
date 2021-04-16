@@ -10,6 +10,7 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -46,6 +47,17 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
         startBtn = findViewById(R.id.startButton);
         iconBtn = findViewById(R.id.iconsButton);
 
+        ImageButton back = (ImageButton) findViewById(R.id.backBtn);
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override

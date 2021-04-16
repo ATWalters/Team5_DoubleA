@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -52,6 +53,18 @@ public class icons extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icons);
+
+        ImageButton back = (ImageButton) findViewById(R.id.backBtn);
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), gameandicons.class);
+                startActivity(intent);
+            }
+
+        });
 
         Intent mIntent = getIntent();
         int score = mIntent.getIntExtra("SCORE", 0);

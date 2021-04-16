@@ -2,9 +2,16 @@ package cpsc4150.allaroundclemson;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +29,10 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.Task;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapsActivity extends AppCompatActivity
         implements
         OnMapReadyCallback,
@@ -34,6 +45,7 @@ public class MapsActivity extends AppCompatActivity
     private Location lastKnownLocation;
     private boolean locationPermissionGranted;
 
+    private EditText mSearchText;
     //Default location of Sikes Hall, Clemson, SC
     private final LatLng defaultLocation = new LatLng(34.6793, -82.8351);
     private final float mZoomLevel = 18;
@@ -43,6 +55,7 @@ public class MapsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        mSearchText = (EditText) findViewById(R.id.search_places);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         getDeviceLocation();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -69,7 +82,7 @@ public class MapsActivity extends AppCompatActivity
         getLocationPermission();
         enableMyLocation();
         getDeviceLocation();
-
+        search();
         //Used in making sure the GoogleMap was working correctly before going ahead with
         //adding all of our functionality
 
@@ -80,11 +93,52 @@ public class MapsActivity extends AppCompatActivity
 
     }
 
+    private void search(){
+        mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent keyEvent) {
+                if(actionId == EditorInfo.IME_ACTION_SEARCH
+                    || actionId == EditorInfo.IME_ACTION_DONE
+                    || keyEvent.getAction() == KeyEvent.ACTION_DOWN
+                    || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER){
+
+                    //Code to search for a location
+                    locate();
+                }
+
+                return false;
+            }
+        });
+    }
+
+    private void locate(){
+        String search = mSearchText.getText().toString();
+
+        Geocoder geocoder = new Geocoder(MapsActivity.this);
+        List<Address> list = new ArrayList<>();
+
+        try{
+            list = geocoder.getFromLocationName(search, 1);
+        }catch(IOException e){
+            Log.e(TAG, "locate" + e.getMessage());
+        }
+
+        if(list.size() > 0){
+            Address address = list.get(0);
+            Log.e(TAG, "locate: Found: " + address.toString());
+
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(address.getLatitude(), address.getLongitude()), mZoomLevel));
+            hideKeyboard();
+        }else{
+            Log.e(TAG, "No locations found");
+        }
+    }
     private void enableMyLocation(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             if (mMap != null) {
                 mMap.setMyLocationEnabled(true);
+                mMap.getUiSettings().setMyLocationButtonEnabled(false);
             }
         }
     }
@@ -107,7 +161,7 @@ public class MapsActivity extends AppCompatActivity
                                             lastKnownLocation.getLongitude()), mZoomLevel));
                         }
                     } else {
-                        Log.d(TAG, "Current location is null. Using defaults.");
+                        Log.e(TAG, "Current location is null. Using defaults.");
                         Log.e(TAG, "Exception: %s", task.getException());
                         mMap.moveCamera(CameraUpdateFactory
                                 .newLatLngZoom(defaultLocation, mZoomLevel));
@@ -141,5 +195,10 @@ public class MapsActivity extends AppCompatActivity
     public boolean onMyLocationButtonClick() {
         Toast.makeText(this, "Your Location", Toast.LENGTH_SHORT).show();
         return false;
+    }
+
+    //Hides the keyboard from being on the screen
+    private void hideKeyboard(){
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 }

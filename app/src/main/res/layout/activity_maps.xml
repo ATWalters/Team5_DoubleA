@@ -10,11 +10,44 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="353dp"
-        android:layout_height="382dp"
-        android:layout_marginTop="108dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="386dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_places"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/search"
+            android:background="@null"
+            android:hint="@string/enter_destination"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

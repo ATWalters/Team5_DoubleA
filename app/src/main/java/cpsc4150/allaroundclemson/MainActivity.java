@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
     }
 
     public void startMapsView(){
-        //Intent myIntent = new Intent(this, /maps view);
-        //startActivity(myIntent);
+        Intent myIntent = new Intent(this, MapsActivity.class);
+        startActivity(myIntent);
     }
 
 }

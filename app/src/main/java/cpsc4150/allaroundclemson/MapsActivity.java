@@ -2,16 +2,11 @@ package cpsc4150.allaroundclemson;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,19 +14,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.api.model.RectangularBounds;
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class MapsActivity extends AppCompatActivity
         implements
@@ -45,7 +46,13 @@ public class MapsActivity extends AppCompatActivity
     private Location lastKnownLocation;
     private boolean locationPermissionGranted;
 
-    private EditText mSearchText;
+    //Used to restrict Autocomplete searching to basically campus and a little bit of the
+    // surrounding area
+    private final LatLng southwest = new LatLng(34.654815, -82.857813);
+    private final LatLng northeast = new LatLng(34.69385, -82.814127);
+    //Boundary to sort searching by
+    RectangularBounds bounds = RectangularBounds.newInstance(southwest, northeast);
+
     //Default location of Sikes Hall, Clemson, SC
     private final LatLng defaultLocation = new LatLng(34.6793, -82.8351);
     private final float mZoomLevel = 18;
@@ -55,7 +62,6 @@ public class MapsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        mSearchText = (EditText) findViewById(R.id.search_places);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         getDeviceLocation();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -63,6 +69,34 @@ public class MapsActivity extends AppCompatActivity
                 .findFragmentById(R.id.map);
         assert mapFragment != null;
         mapFragment.getMapAsync(this);
+
+        if (!Places.isInitialized()) {
+            Places.initialize(getApplicationContext(), getString(R.string.google_maps_key));
+        }
+
+        AutocompleteSupportFragment autocompleteSupportFragment = (AutocompleteSupportFragment)
+                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+
+        assert autocompleteSupportFragment != null;
+        Objects.requireNonNull(autocompleteSupportFragment.getView()).setBackgroundColor(Color.WHITE);
+        autocompleteSupportFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.LAT_LNG))
+                .setLocationBias(bounds);
+
+        autocompleteSupportFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(@NonNull Place place) {
+                Log.e(TAG, place.toString());
+
+                //Method that handles what to do once the user selects a place
+                locate(place);
+
+            }
+
+            @Override
+            public void onError(@NonNull Status status) {
+                Log.e(TAG, "Error: " + status);
+            }
+        });
 
     }
     /**
@@ -82,7 +116,7 @@ public class MapsActivity extends AppCompatActivity
         getLocationPermission();
         enableMyLocation();
         getDeviceLocation();
-        search();
+
         //Used in making sure the GoogleMap was working correctly before going ahead with
         //adding all of our functionality
 
@@ -90,48 +124,21 @@ public class MapsActivity extends AppCompatActivity
         //LatLng clemson = new LatLng(34.6793, -82.8351);
         //mMap.addMarker(new MarkerOptions().position(clemson).title("Marker in Clemson"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(clemson, 19));
-
     }
 
-    private void search(){
-        mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_SEARCH
-                    || actionId == EditorInfo.IME_ACTION_DONE
-                    || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                    || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER){
 
-                    //Code to search for a location
-                    locate();
-                }
+    private void locate(Place place){
 
-                return false;
-            }
-        });
-    }
+        LatLng destination = place.getLatLng();
+        String destName = place.getName();
+        assert destination != null;
+        //Clear any other markers on the map
+        mMap.clear();
+        //Add a marker at the destination user selected
+        mMap.addMarker(new MarkerOptions().position(destination).title("Marker at " + destName));
+        //Move the camera to that destination
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(place.getLatLng(), mZoomLevel));
 
-    private void locate(){
-        String search = mSearchText.getText().toString();
-
-        Geocoder geocoder = new Geocoder(MapsActivity.this);
-        List<Address> list = new ArrayList<>();
-
-        try{
-            list = geocoder.getFromLocationName(search, 1);
-        }catch(IOException e){
-            Log.e(TAG, "locate" + e.getMessage());
-        }
-
-        if(list.size() > 0){
-            Address address = list.get(0);
-            Log.e(TAG, "locate: Found: " + address.toString());
-
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(address.getLatitude(), address.getLongitude()), mZoomLevel));
-            hideKeyboard();
-        }else{
-            Log.e(TAG, "No locations found");
-        }
     }
     private void enableMyLocation(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)

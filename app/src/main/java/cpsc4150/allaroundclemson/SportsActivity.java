@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.VolleyError;
@@ -34,6 +35,18 @@ public class SportsActivity extends AppCompatActivity
         //Testing to make sure this would update textview, leaving commented for now to reference later
         //TextView homeTeamName = (TextView)findViewById(R.id.homeTeamName);
         //homeTeamName.setText(getString(R.string.homeTeam));
+
+        ImageButton back = (ImageButton) findViewById(R.id.backBtn);
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
         mSportsFetcher = new SportsFetcher(this);
         mSportsFetcher.fetchCurrentGames(mFetchListener);
@@ -111,6 +124,18 @@ public class SportsActivity extends AppCompatActivity
 
     public void back_to_list_btn(View view) {
         setContentView(R.layout.activity_sports);
+
+        ImageButton back = (ImageButton) findViewById(R.id.backBtn);
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment;

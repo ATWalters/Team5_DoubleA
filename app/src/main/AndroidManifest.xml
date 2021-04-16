@@ -2,14 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cpsc4150.allaroundclemson">
 
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllAroundClemson">
-        <activity android:name=".gameandicons"/>
-        <activity android:name=".prospectiveStudent"/>
-        <activity android:name=".currentStudent"/>
-        <activity android:name=".fan"/>
-        <activity android:name=".alumni"/>
+
+        
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -38,6 +40,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
+
+
+        <activity android:name=".icons"></activity>
+        <activity android:name=".trivia"/>
+        <activity android:name=".gameandicons" />
+        <activity android:name=".prospectiveStudent" />
+        <activity android:name=".currentStudent" />
+        <activity android:name=".fan" />
+        <activity android:name=".alumni" />
         <activity android:name=".SportsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

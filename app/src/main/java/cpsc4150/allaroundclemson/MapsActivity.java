@@ -63,9 +63,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //adding all of our functionality
 
         // Add a marker in Clemson and move the camera
-        LatLng clemson = new LatLng(34.6793, -82.8351);
-        mMap.addMarker(new MarkerOptions().position(clemson).title("Marker in Clemson"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(clemson, 19));
+        //LatLng clemson = new LatLng(34.6793, -82.8351);
+        //mMap.addMarker(new MarkerOptions().position(clemson).title("Marker in Clemson"));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(clemson, 19));
 
     }
 

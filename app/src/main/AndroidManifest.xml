@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllAroundClemson">
+
         <activity android:name=".icons"></activity>
         <activity android:name=".trivia"/>
         <activity android:name=".gameandicons" />

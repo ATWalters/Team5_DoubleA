@@ -27,6 +27,7 @@ import java.util.List;
 public class gameandicons extends AppCompatActivity implements gameInfoDialog.gameInfoDialogListener {
     private Button startBtn;
     private Button iconBtn;
+
     private String Username;
     private ArrayList<leaderboard> ldboard = new ArrayList<leaderboard>();
     RecyclerView recyclerView;
@@ -44,6 +45,7 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
 
         startBtn = findViewById(R.id.startButton);
         iconBtn = findViewById(R.id.iconsButton);
+
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +86,16 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
         }
 
         startActivity(myIntent);
+        /*create recyclerview
+            has both username and score
+         */
+
+
+
+        /*
+            Icon button brings you to new page with all the icons
+         */
+
     }
 
     public void openGameDialog(){
@@ -108,8 +120,6 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
                 //ldboard.add(copy);
 
                 adapter.add(copy);
-
-
 
 
             }

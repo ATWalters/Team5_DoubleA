@@ -35,7 +35,6 @@ public class SportsActivity extends AppCompatActivity
         //TextView homeTeamName = (TextView)findViewById(R.id.homeTeamName);
         //homeTeamName.setText(getString(R.string.homeTeam));
 
-        //TODO: Add call to functions that handle API stuff
         mSportsFetcher = new SportsFetcher(this);
         mSportsFetcher.fetchCurrentGames(mFetchListener);
         Date currentDate = Calendar.getInstance().getTime();

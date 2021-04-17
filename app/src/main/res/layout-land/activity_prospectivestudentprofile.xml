@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/profileType"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/prospective_student"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profileInformation"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@color/orange"
+            android:text="@string/applications_taken_header"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_below="@id/profileType"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/applications_taken"
+            android:textSize="25sp"
+            android:id="@+id/appstaken"
+            android:layout_below="@id/profileInformation"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@color/orange"
+            android:text="@string/due_dates"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginLeft="310dp"
+            android:id="@+id/duedates"
+            android:layout_below="@id/profileType"
+            />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/prospective_deadlines"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="310dp"
+            android:layout_below="@id/duedates"
+            />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/prospectiveLink"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_below="@id/appstaken"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/back_background"
+                android:contentDescription="@string/back_to_previous_page"
+                android:src="@drawable/back_arrow">
+
+            </ImageButton>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

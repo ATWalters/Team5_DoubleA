@@ -4,6 +4,7 @@
     <string name="mapTitle">Campus Map</string>
     <string name="sportsTitle">Sports</string>
     <string name="gameTitle">Trivia Game</string>
+    <string name="moreInfo">More Information</string>
     <string name="prospectiveLink">
         <a href="https://www.clemson.edu/admissions/applying-to-clemson/freshman-students.html">Link to more information</a>
     </string>

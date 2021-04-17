@@ -407,5 +407,23 @@
   
     <string name="title_activity_maps">Map</string>
     <string name="enter_destination">Enter destination</string>
+    <string name="alumni">Alumni</string>
+    <string name="events">Events</string>
+    <string name="upcoming_events">October 2 - Clemson vs Boston College - Homecoming \n\nNovember 13 - Military Appreciation Clemson vs - UConn</string>
+    <string name="back_to_previous_page">back to previous page</string>
+    <string name="current_student">Current Student</string>
+    <string name="classes">CLASSES</string>
+    <string name="add">add</string>
+    <string name="delete">delete</string>
+    <string name="prospective_deadlines">August 1st - Application Opens\n\nDecember 1st - Application Due for priority notification\n\nDecember 31st - Test Scores and Transcripts Due \n\nFebruary 15th - Notification Date for priority students \n\nMay 1st - Appication due</string>
+    <string name="due_dates">Due Dates</string>
+    <string name="applications_taken">- Common Application\n- Clemson Application\n- Coalition Application</string>
+    <string name="applications_taken_header">Applications Taken</string>
+    <string name="prospective_student">Prospective Student</string>
+    <string name="fan">Fan</string>
+    <string name="start_game">Start Game</string>
+    <string name="icons">Icons</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="game_play">Game Play</string>
 
 </resources>

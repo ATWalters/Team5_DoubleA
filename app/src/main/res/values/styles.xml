@@ -3,29 +3,29 @@
     <style name="penaltyList">
         <item name="android:textSize">@dimen/penalty_list_size</item>
         <item name="android:padding">@dimen/penalty_list_padding</item>
-        <item name="android:textColor">@color/orange</item>
+        <item name="android:textColor">@color/clemsonOrange</item>
     </style>
 
     <style name="penaltyDesc">
         <item name="android:textSize">@dimen/penalty_list_size</item>
         <item name="android:padding">@dimen/penalty_list_padding</item>
-        <item name="android:textColor">@color/orange</item>
+        <item name="android:textColor">@color/clemsonOrange</item>
     </style>
 
     <style name="teamName">
         <item name="android:textSize">@dimen/team_name_size</item>
-        <item name="android:textColor">@color/orange</item>
+        <item name="android:textColor">@color/clemsonOrange</item>
 
     </style>
 
     <style name="teamScore">
         <item name="android:textSize">@dimen/team_score_size</item>
-        <item name="android:textColor">@color/orange</item>
+        <item name="android:textColor">@color/clemsonOrange</item>
     </style>
 
     <style name="penaltyHeader">
         <item name="android:textSize">@dimen/team_name_size</item>
-        <item name="android:background">@color/orange</item>
+        <item name="android:background">@color/clemsonOrange</item>
         <item name="android:textColor">@color/white</item>
     </style>
 

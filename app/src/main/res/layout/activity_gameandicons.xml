@@ -1,58 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<RelativeLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id = "@+id/game_icon_layout"
-    >
+    android:id="@+id/game_icon_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Game Play"
+        android:layout_marginTop="28dp"
+        android:text="@string/game_play"
         android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
+        android:textColor="@color/orange"
         android:textSize="50dp"
-        android:textColor="@color/orange"/>
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "Leaderboard"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/orange"
+        android:text="@string/leaderboard"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="italic"
-        android:textAlignment="center"
-        android:background="@color/orange"
-        android:textColor="@color/white"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvleaderboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/rvleaderboard"/>
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Start Game"
-        android:layout_centerInParent="true"
         android:id="@+id/startButton"
-        android:layout_below="@id/rvleaderboard"
-        />
-
-    <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Icons"
+        android:layout_below="@id/rvleaderboard"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/start_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvleaderboard" />
+
+    <Button
         android:id="@+id/iconsButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/startButton"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:text="@string/icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_background"
+            android:contentDescription="@string/back_to_previous_page"
+            android:src="@drawable/back_arrow">
+
+        </ImageButton>
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

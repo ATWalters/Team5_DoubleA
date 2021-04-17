@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="orange">#FF8C00</color>
+    <color name="orange">#f56600</color>
+    <!--Clemson official colors-->
+    <color name="clemsonOrange">#f56600</color>
+    <color name="regalia">#522D80</color>
 </resources>

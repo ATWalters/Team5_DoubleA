@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id = "@+id/profileLayout"
-    >
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Fan"
+                    android:text="@string/fan"
                     android:textAlignment="center"
                     android:textSize="50sp"
                     android:layout_marginTop="20dp"
@@ -148,7 +148,24 @@
                 android:textColorLink="@color/white"
                 android:background="@color/orange"/>
 
-        </LinearLayout>
-    </ScrollView>
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp">
 
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back_background"
+                    android:src="@drawable/back_arrow"
+                    android:contentDescription="@string/back_to_previous_page">
+
+                </ImageButton>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

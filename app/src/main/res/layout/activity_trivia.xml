@@ -14,11 +14,23 @@
         android:padding="8dp">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRIVIA"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:id="@+id/triviaName"
+            />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Score"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:layout_alignParentLeft="true"
+            android:layout_below="@id/triviaName"
             android:id="@+id/txtScore"/>
 
         <TextView
@@ -27,7 +39,8 @@
             android:id="@+id/Score"
             android:layout_alignParentRight="true"
             android:text="0"
-            android:textSize="20sp"/>
+            android:textSize="30sp"
+            android:layout_below="@id/triviaName"/>
 
     </RelativeLayout>
 
@@ -36,6 +49,7 @@
         android:layout_height="70dp"
         android:text="the question"
         android:padding="8dp"
+        android:textSize="30sp"
         android:layout_marginBottom="40dp"
         android:id="@+id/txtquestion"/>
 

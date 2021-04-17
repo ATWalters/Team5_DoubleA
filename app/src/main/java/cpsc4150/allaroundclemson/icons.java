@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class icons extends AppCompatActivity {
+public class icons extends AppCompatActivity implements gradDialog.gradDialogListener, ringDialog.ringDialogListener {
 
     private LayoutInflater mInflator;
     private static final int CAMERA_REQUEST = 1888;
@@ -40,13 +40,16 @@ public class icons extends AppCompatActivity {
     private CardView ring;
 
 
+    private int view;
+
+
 
     private void setMedals(int s){
-        if(s >= 8){
-            secondM.setCardBackgroundColor(getColor(R.color.orange));
-        }else if (s == 10){
+        if(s == 10){
             secondM.setCardBackgroundColor(getColor(R.color.orange));
             firstM.setCardBackgroundColor(getColor(R.color.orange));
+        }else if (s > 8){
+            secondM.setCardBackgroundColor(getColor(R.color.orange));
         }
     }
     @Override
@@ -104,6 +107,7 @@ public class icons extends AppCompatActivity {
 
                                     Calendar calendar = Calendar.getInstance();
                                     int day = calendar.get(Calendar.DAY_OF_WEEK);
+                                    view = 0;
 
                                     if(day == Calendar.FRIDAY) {
                                         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
@@ -112,8 +116,10 @@ public class icons extends AppCompatActivity {
                                         }
                                         else
                                         {
+
                                             Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                                             startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
                                         }
 
                                     }
@@ -264,7 +270,24 @@ public class icons extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     //open thing to complete
                                     //if it is completed turn the background orange
-                                    baseball.setCardBackgroundColor(getColor(R.color.orange));
+                                    Calendar calendar = Calendar.getInstance();
+                                    int month = calendar.get(Calendar.MONTH);
+                                    view = 1;
+
+                                    if(month > 1 || month < 7) {
+                                        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
+                                        {
+                                            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+                                        }
+                                        else
+                                        {
+
+                                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                                            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+                                        }
+
+                                    }
 
                                 }
 
@@ -319,8 +342,21 @@ public class icons extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     //open thing to complete
                                     //if it is completed turn the background orange
-                                    basketball.setCardBackgroundColor(getColor(R.color.orange));
+                                    Calendar calendar = Calendar.getInstance();
+                                    int month = calendar.get(Calendar.MONTH);
+                                    view = 2;
 
+                                    if (month > 10 || month < 4) {
+                                        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                                            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+                                        } else {
+
+                                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                                            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+                                        }
+
+                                    }
                                 }
 
                             })
@@ -375,7 +411,20 @@ public class icons extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     //open thing to complete
                                     //if it is completed turn the background orange
-                                    soccer.setCardBackgroundColor(getColor(R.color.orange));
+                                    Calendar calendar = Calendar.getInstance();
+                                    int month = calendar.get(Calendar.MONTH);
+                                    view = 3;
+
+                                    if(month > 8) {
+                                        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                                            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+                                        } else {
+
+                                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                                            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+                                        }
+                                    }
 
                                 }
 
@@ -430,7 +479,20 @@ public class icons extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     //open thing to complete
                                     //if it is completed turn the background orange
-                                    football.setCardBackgroundColor(getColor(R.color.orange));
+                                    Calendar calendar = Calendar.getInstance();
+                                    int month = calendar.get(Calendar.MONTH);
+                                    view = 4;
+
+                                    if(month > 8 || month < 2) {
+                                        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                                            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+                                        } else {
+
+                                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                                            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+                                        }
+                                    }
 
                                 }
 
@@ -473,32 +535,7 @@ public class icons extends AppCompatActivity {
             {
 
                 if (gradCap.getCardBackgroundColor().getDefaultColor() == ContextCompat.getColor(getApplication(), R.color.white)){
-
-                    AlertDialog completed = new AlertDialog.Builder(icons.this)
-                            // set message, title, and icon
-                            .setTitle("Graduate Icon")
-                            .setMessage("Graduate from Clemson University")
-
-                            .setPositiveButton("Complete it", new DialogInterface.OnClickListener() {
-
-                                public void onClick(DialogInterface dialog, int whichButton) {
-                                    //open thing to complete
-                                    //if it is completed turn the background orange
-                                    gradCap.setCardBackgroundColor(getColor(R.color.orange));
-
-                                }
-
-                            })
-                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            })
-                            .create();
-
-                    completed.show();
-
+                    gradDialog();
                 }else{
                     AlertDialog completed = new AlertDialog.Builder(mInflator.getContext())
                             // set message, title, and icon
@@ -527,31 +564,7 @@ public class icons extends AppCompatActivity {
             {
 
                 if (ring.getCardBackgroundColor().getDefaultColor() == ContextCompat.getColor(getApplication(), R.color.white)){
-
-                    AlertDialog completed = new AlertDialog.Builder(icons.this)
-                            // set message, title, and icon
-                            .setTitle("Clemson Ring Icon")
-                            .setMessage("Receive a Clemson Ring")
-
-                            .setPositiveButton("Complete it", new DialogInterface.OnClickListener() {
-
-                                public void onClick(DialogInterface dialog, int whichButton) {
-                                    //open thing to complete
-                                    //if it is completed turn the background orange
-                                    ring.setCardBackgroundColor(getColor(R.color.orange));
-
-                                }
-
-                            })
-                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            })
-                            .create();
-
-                    completed.show();
+                    ringDialog();
 
                 }else{
                     AlertDialog completed = new AlertDialog.Builder(mInflator.getContext())
@@ -586,6 +599,7 @@ public class icons extends AppCompatActivity {
                 Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                setView(view);
             }
             else
             {
@@ -598,7 +612,73 @@ public class icons extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
-            shirtView.setCardBackgroundColor(getColor(R.color.orange));
+            setView(view);
+        }
+    }
+
+    private void setView(int v){
+        switch(v){
+            case 0:
+                shirtView.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 1:
+                baseball.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 2:
+                basketball.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 3:
+                soccer.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 4:
+                football.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 5:
+                gradCap.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+            case 6:
+                ring.setCardBackgroundColor(getColor(R.color.orange));
+                break;
+        }
+    }
+
+    private void gradDialog(){
+        gradDialog infoDialog = new gradDialog();
+        infoDialog.show(getSupportFragmentManager(), "gradDialog");
+    }
+
+    private void ringDialog(){
+        ringDialog infoDialog = new ringDialog();
+        infoDialog.show(getSupportFragmentManager(), "ringDialog");
+    }
+
+    @Override
+    public void correctYear(boolean correct) {
+        if(correct){
+            view = 5;
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+            } else {
+
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+            }
+        }
+    }
+
+    @Override
+    public void correctRingYear(boolean correct) {
+        if(correct) {
+            view = 6;
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+            } else {
+
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+            }
         }
     }
 }

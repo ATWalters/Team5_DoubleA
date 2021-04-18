@@ -2,6 +2,7 @@ package cpsc4150.allaroundclemson;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -52,5 +53,23 @@ public class ClassDatabase extends SQLiteOpenHelper {
         int rowsDeleted = db.delete(ClassTable.TABLE,
                 ClassTable.COL_CODE + " =? AND " + ClassTable.COL_NAME + " =?",
                 new String[] {code, name});
+    }
+
+    public void popAdapter(clemsonClassAdapter ad){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query = "select * from " + ClassTable.TABLE;
+        Cursor cursor = db.rawQuery(query, null);
+
+        if (cursor.moveToFirst()) {
+            do{
+                String name = cursor.getString(1);
+                String code = cursor.getString(2);
+                int section = cursor.getInt(3);
+                clemsonClass temp = new clemsonClass(name, code, section, 1);
+                ad.add(temp);
+            }while(cursor.moveToNext());
+        }
+
     }
 }

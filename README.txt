@@ -1,8 +1,8 @@
 # Team5_DoubleA
 CPSC 4150 Project AllAroundClemson
 
-Allison Tizik
-Austin Walters
+Allison Tizik C19929172
+Austin Walters C90531597
 4/18/2021
 
 ABOUT Team5_FinalProject

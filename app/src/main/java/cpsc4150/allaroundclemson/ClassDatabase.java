@@ -47,10 +47,10 @@ public class ClassDatabase extends SQLiteOpenHelper {
         return db.insert(ClassTable.TABLE, null, values);
     }
 
-    public boolean deleteClass(long id){
+    public void deleteClass(String name, String code){
         SQLiteDatabase db = getWritableDatabase();
-        int rowsDeleted = db.delete(ClassTable.TABLE, ClassTable.COL_ID + " = ?",
-                new String[]{Long.toString(id)});
-        return rowsDeleted > 0;
+        int rowsDeleted = db.delete(ClassTable.TABLE,
+                ClassTable.COL_CODE + " =? AND " + ClassTable.COL_NAME + " =?",
+                new String[] {code, name});
     }
 }

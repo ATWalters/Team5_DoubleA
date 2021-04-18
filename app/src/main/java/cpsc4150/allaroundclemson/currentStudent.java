@@ -19,7 +19,7 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
     private Button deleteBtn;
     RecyclerView recyclerView;
     clemsonClassAdapter adapter;
-    private ClassDatabase db;
+    private ClassDatabase db = new ClassDatabase(this);
 
 
     @Override
@@ -82,6 +82,8 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
     public void deleteClassinfo(String name, String code) {
 
         adapter.remove(name, code);
+        db.deleteClass(name, code);
+
     }
 
     public void openDeleteDialog(){

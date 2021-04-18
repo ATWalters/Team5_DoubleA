@@ -78,11 +78,20 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         long id = db.addClass(cl);
     }
 
+    /*
+    Pre: add class button was pressed
+    Post: a dialog is opened to allow user input of a class
+     */
     public void openClassDialog(){
         classInfoDialog infoDialog = new classInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "classInfoDialog");
     }
 
+
+    /*
+    Pre: name - is a class, code - is a 4 digit number
+    Post: class is deleted from the adapter list
+     */
     @Override
     public void deleteClassinfo(String name, String code) {
 
@@ -91,6 +100,10 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
 
     }
 
+    /*
+    Pre: delete button was pressed
+    Post: a dialog is opened to allow user input of class to delete
+     */
     public void openDeleteDialog(){
         deleteInfoDialog infoDialog = new deleteInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "deleteInfoDialog");

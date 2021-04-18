@@ -79,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/alumniLink"
+        android:id="@+id/alumniLink"
         android:textSize="30sp"
         android:layout_marginLeft="380dp"
         android:textAlignment="center"

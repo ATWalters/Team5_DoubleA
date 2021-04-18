@@ -62,6 +62,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/alumniLink"
         android:textSize="30sp"
+        android:id="@+id/alumniLink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

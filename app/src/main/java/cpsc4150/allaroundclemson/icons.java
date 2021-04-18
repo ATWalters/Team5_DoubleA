@@ -729,13 +729,20 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         }
     }
 
-    //Display a grad dialog to get the graduation year for a user
+    /*
+    Display a grad dialog to get the graduation year for a user
+    Pre: when the graduation icon is pressed
+    Post: pulls up dialog asking for what year they should graduate
+     */
     private void gradDialog(){
         gradDialog infoDialog = new gradDialog();
         infoDialog.show(getSupportFragmentManager(), "gradDialog");
     }
 
-    //Display a ring dialog to get the year a user gets their ring
+    /*Display a ring dialog to get the year a user gets their ring
+    Pre: when the ring icon is pressed
+    Post: pulls up dialog asking for what year they should receive their ring
+     */
     private void ringDialog(){
         ringDialog infoDialog = new ringDialog();
         infoDialog.show(getSupportFragmentManager(), "ringDialog");

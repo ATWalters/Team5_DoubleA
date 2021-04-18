@@ -9,8 +9,10 @@ package cpsc4150.allaroundclemson;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +22,7 @@ public class alumni extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni);
+        setupHyperlink();
 
         ImageButton back = (ImageButton) findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener()
@@ -32,6 +35,11 @@ public class alumni extends AppCompatActivity {
             }
 
         });
+    }
+
+    private void setupHyperlink() {
+        TextView linkTextView = findViewById(R.id.alumniLink);
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 }

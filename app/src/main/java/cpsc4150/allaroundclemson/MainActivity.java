@@ -80,11 +80,18 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
 
     }
 
-    //Opens the dialog that asks the user what type of user they are
+    /*
+    Opens the dialog that asks the user what type of user they are
+    Pre: The profile cardView was pressed
+    Post: a dialog allowing user to pick what they are
+     */
     public void openProfileDialog(){
         infoDialog.show(getSupportFragmentManager(), "profileInfoDialog");
     }
 
+    /*
+    Pre: 0 <= profile <=3
+     */
     @Override
     public void applyProfile(int profile){
         if(profile == 0){
@@ -105,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
 
         }
     }
+
 
     //Starts the game and trivia view
     public void startGameView(){

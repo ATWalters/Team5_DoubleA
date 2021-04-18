@@ -21,7 +21,8 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
 
     }
 
-    //Adding a leaderboard to the adapter
+
+    //Adding a leaderboard to the adapter, only the top 5 of the leaderboard are shown
     public void add(leaderboard content) {
         leaderboard current = content;
 

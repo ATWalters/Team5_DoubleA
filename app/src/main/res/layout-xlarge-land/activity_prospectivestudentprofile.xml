@@ -79,6 +79,7 @@
             android:textSize="30sp"
             android:textAlignment="center"
             android:layout_below="@id/appstaken"
+            android:id="@+id/psLink"
             android:contentDescription="Link for more information"/>
 
         <RelativeLayout

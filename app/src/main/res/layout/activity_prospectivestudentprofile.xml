@@ -69,6 +69,7 @@
                 android:text="@string/prospectiveLink"
                 android:layout_marginTop="20dp"
                 android:textSize="30sp"
+                android:id="@+id/psLink"
                 android:contentDescription="Link to more information"/>
 
             <RelativeLayout

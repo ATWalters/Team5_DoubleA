@@ -126,7 +126,10 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
 
     }
 
-    //Method that opens the game dialog
+    /*Method that opens the game dialog
+    Pre: start game button was clicked
+    Post: game dialog pops up asking for username
+     */
     public void openGameDialog(){
         gameInfoDialog infoDialog = new gameInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "gameInfoDialog");
@@ -146,7 +149,6 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
             if(resultCode == RESULT_OK) {
                 int newscore = data.getIntExtra("SCORE", 0);
                 leaderboard copy = new leaderboard(Username, newscore);
-                //ldboard.add(copy);
 
                 adapter.add(copy);
                 db.addLeaderboard(copy);

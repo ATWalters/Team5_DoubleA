@@ -36,6 +36,8 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
     RecyclerView recyclerView;
     leaderboardAdapter adapter;
 
+    private LeaderboardDatabase db = new LeaderboardDatabase(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,8 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
 
         startBtn = findViewById(R.id.startButton);
         iconBtn = findViewById(R.id.iconsButton);
+
+        db.popAdapter(adapter);
 
         SharedPreferences prefs = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
@@ -150,8 +154,7 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
                 //ldboard.add(copy);
 
                 adapter.add(copy);
-
-
+                db.addLeaderboard(copy);
             }
         }
     }

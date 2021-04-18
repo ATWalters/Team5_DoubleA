@@ -76,7 +76,6 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         clemsonClass cl = new clemsonClass(name, code, section);
         adapter.add(cl);
         long id = db.addClass(cl);
-        cl.setId(id);
     }
 
     public void openClassDialog(){

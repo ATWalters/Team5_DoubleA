@@ -142,6 +142,8 @@ public class MapsActivity extends AppCompatActivity
     }
 
 
+    //Method that moves the camera to the location that the user searched for as well as places
+    // a marker at that location
     private void locate(Place place){
 
         LatLng destination = place.getLatLng();
@@ -155,6 +157,8 @@ public class MapsActivity extends AppCompatActivity
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(place.getLatLng(), mZoomLevel));
 
     }
+
+    //Method that enables the location of the device, places the blue little dot on the map
     private void enableMyLocation(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -165,6 +169,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
+    //Method that gets the last known location of the device
     private void getDeviceLocation() {
         /*
          * Get the best and most recent location of the device, which may be null in rare
@@ -196,6 +201,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
+    //Method that asks for the location permission if it isn't already granted
     private void getLocationPermission() {
         /*
          * Request location permission, so that we can get the location of the

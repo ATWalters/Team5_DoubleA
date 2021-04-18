@@ -63,6 +63,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         prefs = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
         editor = prefs.edit();
 
+        //Gets the boolean of all the different icons
         orangeCompleted = prefs.getBoolean("orange_completed", false);
         firstCompleted = prefs.getBoolean("first_completed", false);
         secondCompleted = prefs.getBoolean("second_completed", false);
@@ -88,6 +89,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         Intent mIntent = getIntent();
         int score = mIntent.getIntExtra("SCORE", 0);
 
+        //Setting the different cardviews
         this.mInflator = LayoutInflater.from(this);
         shirtView = findViewById(R.id.shirt_view);
         firstM = findViewById(R.id.firstmedal_view);
@@ -99,8 +101,10 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         gradCap = findViewById(R.id.gradcap_view);
         ring = findViewById(R.id.ring_view);
 
+        //Setting the icons for first and second
         setMedals(score, editor);
 
+        //Sets the icons that are completed to orange
         for(int i = 0; i < NUM_ICONS; i++){
             setView(i);
         }
@@ -654,6 +658,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         }
     }
 
+    // if s is 10 set first and second to completed, if it is over 8 set just second to completed
     private void setMedals(int s, SharedPreferences.Editor e){
         if(s == 10){
             e.putBoolean("first_completed", true).commit();
@@ -666,6 +671,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         }
     }
 
+    //set the icon that corresopnds to v to orange and set it to completed
     private void updateCompleteds(int v){
         switch(v){
             case 0:
@@ -698,6 +704,8 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                 break;
         }
     }
+
+    //Setting the color to orange everytime the icons activity is started
     private void setView(int v){
 
         if(v == 0 && orangeCompleted){
@@ -721,11 +729,13 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         }
     }
 
+    //Display a grad dialog to get the graduation year for a user
     private void gradDialog(){
         gradDialog infoDialog = new gradDialog();
         infoDialog.show(getSupportFragmentManager(), "gradDialog");
     }
 
+    //Display a ring dialog to get the year a user gets their ring
     private void ringDialog(){
         ringDialog infoDialog = new ringDialog();
         infoDialog.show(getSupportFragmentManager(), "ringDialog");

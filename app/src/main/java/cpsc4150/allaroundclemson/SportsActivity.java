@@ -1,10 +1,5 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +8,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.android.volley.VolleyError;
 
@@ -122,6 +122,8 @@ public class SportsActivity extends AppCompatActivity
     }
 
 
+    //Method that listens for if the back button inside of the description fragment is clicked
+    // if it is the description fragment is replaced with the list of penalties fraagment
     public void back_to_list_btn(View view) {
         setContentView(R.layout.activity_sports);
 

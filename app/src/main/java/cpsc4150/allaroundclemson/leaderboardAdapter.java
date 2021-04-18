@@ -1,13 +1,10 @@
 package cpsc4150.allaroundclemson;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +21,7 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
 
     }
 
+    //Adding a leaderboard to the adapter
     public void add(leaderboard content) {
         leaderboard current = content;
 
@@ -34,6 +32,7 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
         notifyItemRangeChanged(0, getItemCount());
     }
 
+    //Removing a leaderboard from the adapter
     public void deleteItem(int position){
         leaderboard current = ldScores.get(position);
         ldScores.remove(position);

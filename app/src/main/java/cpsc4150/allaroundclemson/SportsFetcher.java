@@ -27,6 +27,7 @@ public class SportsFetcher {
         KEY = context.getString(R.string.sports_api_key);
     }
 
+    //Method that makes the api response for if there are any games being played
     public void fetchCurrentGames(final OnSportsDataReceivedListener listener){
         String url = "https://fly.sportsdata.io/v3/cfb/scores/json/AreAnyGamesInProgress?key=" + KEY;
 
@@ -47,6 +48,7 @@ public class SportsFetcher {
         mRequestQueue.add(request);
     }
 
+    //Returns the value of the response from fetchCurrentGames()
     private Boolean parseCurrentGames(String str){
         return Boolean.parseBoolean(str);
     }

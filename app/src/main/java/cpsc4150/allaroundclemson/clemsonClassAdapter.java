@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapter.ViewHolder>{
@@ -23,11 +24,13 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
 
     }
 
+    //Method that adds a class to the adapter
     public void add(clemsonClass content) {
         listClemsonClasses.add(content);
         notifyItemInserted(getItemCount());
     }
 
+    //Method that deletes a class from the adapter
     public void deleteItem(int position){
         clemsonClass current = listClemsonClasses.get(position);
         String className = current.getName() + " " + current.getClassCode();
@@ -55,6 +58,7 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
                 .create();
     }
 
+    //Method that removes the class from the adapter that matches the name and code passed in
     public void remove(String name, String code) {
 
         name = name.toUpperCase();
@@ -114,8 +118,5 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
         }
 
     }
-
-
-
 
 }

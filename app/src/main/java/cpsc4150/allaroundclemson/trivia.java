@@ -1,12 +1,12 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +31,8 @@ public class trivia extends AppCompatActivity {
     private List<String> choices = new ArrayList<String>();
     private List<Integer> randomNumber = new ArrayList<Integer>();
 
+    //Reads all of the questions from the triviaquestions.json file, as well as the correct answer
+    // and choices for the question
     private void setUpQuestions() {
 
         try {
@@ -65,6 +67,8 @@ public class trivia extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    //Makes a list of random numbers to use in the trivia game that decides which questions are asked
 
     private void randomGen() {
         Random numberGenerator = new Random();
@@ -176,6 +180,7 @@ public class trivia extends AppCompatActivity {
         });
     }
 
+    //Chances what the currently displayed question on the screen is
     public void updateQuestion(int position){
         vQuestion.setText(allQuestions.get(position).getQuestion());
         answer = allQuestions.get(position).getAnswer();
@@ -190,6 +195,7 @@ public class trivia extends AppCompatActivity {
 
     }
 
+    //Updates the score as the user gets answers correct or wrong
     public void updateScore(boolean right) {
         if (right) {
             score++;
@@ -199,6 +205,8 @@ public class trivia extends AppCompatActivity {
         }
     }
 
+    //Once the last question is answered end the game passing back necessary info to the
+    // gamesandicon activity
     public boolean gameover(){
         if(questionNumber == 10){
             //dialog message of score

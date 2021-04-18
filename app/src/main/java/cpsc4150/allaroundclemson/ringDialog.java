@@ -41,7 +41,7 @@ public class ringDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Complete it", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String copy = ((EditText) view.findViewById(R.id.gradYear)).getText().toString();
+                        String copy = ((EditText) view.findViewById(R.id.ringYear)).getText().toString();
                         int yr = Integer.parseInt(copy);
 
                         Calendar calendar = Calendar.getInstance();

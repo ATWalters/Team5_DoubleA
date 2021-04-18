@@ -1,14 +1,14 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity implements profileInfoDialog.profileInfoDialogListener {
 
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
 
     }
 
+    //Opens the dialog that asks the user what type of user they are
     public void openProfileDialog(){
         infoDialog.show(getSupportFragmentManager(), "profileInfoDialog");
     }
@@ -105,16 +106,19 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
         }
     }
 
+    //Starts the game and trivia view
     public void startGameView(){
         Intent myIntent = new Intent(this, gameandicons.class);
         startActivity(myIntent);
     }
 
+    //Starts the sports view
     public void startSportsView(){
         Intent myIntent = new Intent(this, SportsActivity.class);
         startActivity(myIntent);
     }
 
+    //Starts the map view
     public void startMapsView(){
         Intent myIntent = new Intent(this, MapsActivity.class);
         startActivity(myIntent);

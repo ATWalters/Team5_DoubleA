@@ -9,15 +9,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class classInfoDialog extends AppCompatDialogFragment {
 
@@ -80,6 +74,8 @@ public class classInfoDialog extends AppCompatDialogFragment {
         }
     }
 
+    //Method that makes sure the passed in information is acceptable
+    // Displays toasts for any info that isn't acceptable
     public boolean checkInfo(String name, String code, int Section){
         boolean classPassed = false;
         AlertDialog dialog = (AlertDialog) getDialog();

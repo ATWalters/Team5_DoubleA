@@ -16,87 +16,100 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:padding="8dp">
-
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TRIVIA"
-                android:textSize="50sp"
-                android:textAlignment="center"
-                android:textColor="@color/orange"
-                android:textStyle="bold"
-                android:id="@+id/triviaName"
-                />
+                android:layout_marginBottom="40dp"
+                android:padding="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Score"
-                android:textSize="30sp"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/triviaName"
-                android:id="@+id/txtScore"/>
+                <TextView
+                    android:id="@+id/triviaName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TRIVIA"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/Score"
-                android:layout_alignParentRight="true"
-                android:text="0"
-                android:textSize="30sp"
-                android:layout_below="@id/triviaName"/>
+                <TextView
+                    android:id="@+id/txtScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/triviaName"
+                    android:layout_alignParentLeft="true"
+                    android:text="Score"
+                    android:textSize="30sp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/Score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/triviaName"
+                    android:layout_alignParentRight="true"
+                    android:text="0"
+                    android:textSize="30sp" />
 
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="the question"
-            android:padding="8dp"
-            android:textSize="30sp"
-            android:layout_marginBottom="40dp"
-            android:id="@+id/txtquestion"/>
+            </RelativeLayout>
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="choice 1"
-            android:padding="8dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginLeft="370dp"
-            android:id="@+id/choice1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="choice 2"
-            android:padding="8dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginLeft="370dp"
-            android:id="@+id/choice2"/>
+                <TextView
+                    android:id="@+id/txtquestion"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:padding="8dp"
+                    android:text="the question"
+                    android:textSize="30sp" />
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="choice 3"
-            android:padding="8dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginLeft="370dp"
-            android:id="@+id/choice3"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="choice 4"
-            android:padding="8dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginLeft="370dp"
-            android:id="@+id/choice4"/>
+                    <Button
+                        android:id="@+id/choice1"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="8dp"
+                        android:text="choice 1" />
+
+                    <Button
+                        android:id="@+id/choice2"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="8dp"
+                        android:text="choice 2" />
+
+                    <Button
+                        android:id="@+id/choice3"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="8dp"
+                        android:text="choice 3" />
+
+                    <Button
+                        android:id="@+id/choice4"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="8dp"
+                        android:text="choice 4" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>

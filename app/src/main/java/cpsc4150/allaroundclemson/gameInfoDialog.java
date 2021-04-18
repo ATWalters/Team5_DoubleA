@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -29,7 +31,7 @@ public class gameInfoDialog extends AppCompatDialogFragment {
 
 
         builder.setView(view)
-                .setTitle("Class Information")
+                .setTitle("Trivia Information")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -40,6 +42,13 @@ public class gameInfoDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         username = ((EditText) view.findViewById(R.id.ETusername)).getText().toString();
+
+                        SharedPreferences prefs = getActivity().getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+
+                        Log.e("Dialog", "" + username);
+                        editor.putString("username", username).apply();
+
                         listener.applyUsername(username);
 
                     }

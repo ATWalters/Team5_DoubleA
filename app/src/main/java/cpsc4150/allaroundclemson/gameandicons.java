@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -28,7 +30,7 @@ import java.util.List;
 public class gameandicons extends AppCompatActivity implements gameInfoDialog.gameInfoDialogListener {
     private Button startBtn;
     private Button iconBtn;
-
+    private final String TAG = "Game";
     private String Username;
     private ArrayList<leaderboard> ldboard = new ArrayList<leaderboard>();
     RecyclerView recyclerView;
@@ -47,6 +49,10 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
         startBtn = findViewById(R.id.startButton);
         iconBtn = findViewById(R.id.iconsButton);
 
+        SharedPreferences prefs = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+
         ImageButton back = (ImageButton) findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener()
         {
@@ -62,7 +68,19 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGameDialog();
+                //openGameDialog();
+
+                boolean firstGameClick = prefs.getBoolean("first_game_click", true);
+
+                if(firstGameClick){
+                    Log.e(TAG, "First game click");
+                    editor.putBoolean("first_game_click", false).commit();
+                    openGameDialog();
+                }else{
+                    Log.e(TAG, "Game clicked");
+                    Username = prefs.getString("username", "Default");
+                    applyUsername(Username);
+                }
 
                 //games beings
                 // get 10 random multiple choice questions

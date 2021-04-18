@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Title of Activity"/>
 
     <TextView
         android:id="@+id/leaderboardtitle"
@@ -35,7 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/gameTitle"
+        android:contentDescription="Leaderboard banner"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvleaderboard"
@@ -46,7 +48,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboardtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/leaderboardtitle"
+        android:contentDescription="leaderboard that holds the leaders of the trivia game"/>
 
     <Button
         android:id="@+id/startButton"
@@ -60,7 +63,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="400dp"
-        app:layout_constraintTop_toBottomOf="@+id/gameTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/gameTitle"
+        android:contentDescription="button to start trivia game"/>
 
     <Button
         android:id="@+id/iconsButton"
@@ -74,7 +78,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        android:contentDescription="button to go to icon page"/>
 
     <RelativeLayout
         android:layout_width="50dp"

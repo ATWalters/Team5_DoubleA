@@ -22,14 +22,13 @@ import java.util.Date;
 public class classInfoDialog extends AppCompatDialogFragment {
 
     public interface classInfoDialogListener {
-        void applyClassinfo(String name, String code, int section, int time);
+        void applyClassinfo(String name, String code, int section);
     }
 
     private classInfoDialog.classInfoDialogListener listener;
     private String className = "";
     private String classCode = "";
     private int classSection;
-    private int classTime;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -55,11 +54,10 @@ public class classInfoDialog extends AppCompatDialogFragment {
                         classCode = ((EditText) view.findViewById(R.id.classCode)).getText().toString();
                         String SclassSection = ((EditText) view.findViewById(R.id.classSection)).getText().toString();
                         classSection = Integer.parseInt(SclassSection);
-                        String SclassTime = ((EditText) view.findViewById(R.id.classTime)).getText().toString();
 
 
-                        if (checkInfo(className, classCode, classSection, classSection)){
-                            listener.applyClassinfo(className, classCode, classSection, classSection);
+                        if (checkInfo(className, classCode, classSection)){
+                            listener.applyClassinfo(className, classCode, classSection);
                             dialog.dismiss();
                         }else{
 
@@ -82,7 +80,7 @@ public class classInfoDialog extends AppCompatDialogFragment {
         }
     }
 
-    public boolean checkInfo(String name, String code, int Section, int time){
+    public boolean checkInfo(String name, String code, int Section){
         boolean classPassed = false;
         AlertDialog dialog = (AlertDialog) getDialog();
 
@@ -107,9 +105,6 @@ public class classInfoDialog extends AppCompatDialogFragment {
        if(Section > 0 && Section < 100){
            sectionPassed = true;
        }
-
-       boolean timePassed = false;
-
 
 
        if(codePassed && classPassed && sectionPassed){

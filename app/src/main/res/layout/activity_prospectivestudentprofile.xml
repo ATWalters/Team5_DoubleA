@@ -17,7 +17,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/clemsonOrange"
                 android:textSize="50sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:contentDescription="Title of Activity"/>
 
             <TextView
                 android:id="@+id/profileInformation"
@@ -28,7 +29,8 @@
                 android:text="@string/applications_taken_header"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:contentDescription="Application Taken Banner"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,7 +39,8 @@
                 android:text="@string/applications_taken"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:contentDescription="Applications that are used"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -47,7 +50,8 @@
                 android:text="@string/due_dates"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:contentDescription="Due Dates Banner"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -56,14 +60,16 @@
                 android:text="@string/prospective_deadlines"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:contentDescription="Due Dates information"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/prospectiveLink"
                 android:layout_marginTop="20dp"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:contentDescription="Link to more information"/>
 
             <RelativeLayout
                 android:layout_width="50dp"

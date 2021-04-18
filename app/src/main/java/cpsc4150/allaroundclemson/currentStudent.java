@@ -65,9 +65,9 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
     }
 
     @Override
-    public void applyClassinfo(String name, String code, int section, int time) {
+    public void applyClassinfo(String name, String code, int section) {
 
-        clemsonClass cl = new clemsonClass(name, code, section, time);
+        clemsonClass cl = new clemsonClass(name, code, section);
         adapter.add(cl);
         long id = db.addClass(cl);
         cl.setId(id);

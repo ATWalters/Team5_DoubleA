@@ -8,5 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:inputType="number"
-        android:id="@+id/gradYear"/>
+        android:id="@+id/gradYear"
+        android:contentDescription="Enter graduation year"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

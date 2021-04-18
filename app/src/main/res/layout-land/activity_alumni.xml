@@ -21,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Title of Activity"/>
 
     <TextView
         android:id="@+id/profileInformation"
@@ -37,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileType" />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="Alumni Events Title"/>
 
     <TextView
         android:id="@+id/textView"
@@ -52,7 +54,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileInformation" />
+        app:layout_constraintTop_toBottomOf="@+id/profileInformation"
+        android:contentDescription="Alumni events"/>
 
     <TextView
         android:id="@+id/moreInformation"
@@ -68,7 +71,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileType" />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="Title for more information"/>
 
     <TextView
         android:layout_width="300dp"
@@ -81,7 +85,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moreInformation" />
+        app:layout_constraintTop_toBottomOf="@+id/moreInformation"
+        android:contentDescription="Link to more information"/>
 
     <RelativeLayout
         android:layout_width="50dp"

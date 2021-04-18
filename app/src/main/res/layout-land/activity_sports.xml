@@ -18,7 +18,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Home team name"/>
 
 
     <TextView
@@ -34,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeTeamScore" />
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamScore"
+        android:contentDescription="Away team name"/>
 
     <TextView
         android:id="@+id/homeTeamScore"
@@ -46,7 +48,8 @@
         android:text="@string/homeScore"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeTeamName" />
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamName"
+        android:contentDescription="Home team score"/>
 
     <TextView
         android:id="@+id/awayTeamScore"
@@ -60,7 +63,8 @@
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/awayTeamName"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.083"
+        android:contentDescription="Away team score"/>
 
     <FrameLayout
         android:id="@+id/penaltyFragmentContainer"
@@ -72,7 +76,8 @@
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clickBelow"
-        app:layout_constraintVertical_bias="0.22">
+        app:layout_constraintVertical_bias="0.22"
+        android:contentDescription="Penalty information to be clicked on">
 
     </FrameLayout>
 
@@ -87,7 +92,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Banner to explain how to learn more about the penalty"/>
 
     <TextView
         android:id="@+id/quarterText"
@@ -100,7 +106,8 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/awayTeamName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="What quarter the game is"/>
 
     <RelativeLayout
         android:layout_width="50dp"
@@ -131,6 +138,7 @@
         android:text="@string/time"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/awayTeamName"
-        app:layout_constraintTop_toBottomOf="@+id/quarterText" />
+        app:layout_constraintTop_toBottomOf="@+id/quarterText"
+        android:contentDescription="Time remaining in the quarter"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

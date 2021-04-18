@@ -22,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Title of Activity"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -38,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileType" />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="Banner for Classes Title"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvClasses"
@@ -49,7 +51,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:contentDescription="allows for classes to be added"/>
 
 
     <Button
@@ -65,6 +68,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="add button"
          />
 
     <Button
@@ -79,7 +83,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintRight_toLeftOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/profileType"  />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="delete button to delete classes"
+        />
 
     <RelativeLayout
         android:layout_width="50dp"

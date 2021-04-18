@@ -13,6 +13,7 @@
         android:textAlignment="center"
         android:textSize="100sp"
         android:textStyle="bold"
+        android:contentDescription="Title of University"
         android:textColor="@color/clemsonOrange"/>
 
     <androidx.cardview.widget.CardView
@@ -23,7 +24,8 @@
         android:layout_height="380dp"
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="250dp"
-        app:cardBackgroundColor="@color/clemsonOrange">
+        app:cardBackgroundColor="@color/clemsonOrange"
+        android:contentDescription="Profile button">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
         android:layout_marginTop="250dp"
         android:layout_marginLeft="410dp"
         app:cardBackgroundColor="@color/clemsonOrange"
+        android:contentDescription="Map button"
         >
 
         <ImageView
@@ -60,7 +63,8 @@
         android:layout_height="380dp"
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="640dp"
-        app:cardBackgroundColor="@color/clemsonOrange">
+        app:cardBackgroundColor="@color/clemsonOrange"
+        android:contentDescription="Sports button">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -78,7 +82,8 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="640dp"
         android:layout_marginLeft="410dp"
-        app:cardBackgroundColor="@color/clemsonOrange">
+        app:cardBackgroundColor="@color/clemsonOrange"
+        android:contentDescription="Game button">
 
         <ImageView
             android:layout_width="wrap_content"

@@ -11,6 +11,7 @@
         android:textSize = "15sp"
         android:id="@+id/textview1"
         android:textAlignment="center"
+        android:contentDescription="holds class name and code"
         />
 
 

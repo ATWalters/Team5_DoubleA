@@ -22,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Title of Activity"/>
 
     <TextView
         android:id="@+id/profileInformation"
@@ -38,7 +39,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileType" />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="Event banner"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -52,7 +55,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileInformation" />
+        app:layout_constraintTop_toBottomOf="@+id/profileInformation"
+        android:contentDescription="Alumni event information"/>
 
     <TextView
         android:id="@+id/moreInformation"
@@ -68,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileType" />
+        app:layout_constraintTop_toBottomOf="@+id/profileType"
+        android:contentDescription="banner for more information"/>
 
     <TextView
         android:layout_width="450dp"
@@ -81,7 +86,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moreInformation" />
+        app:layout_constraintTop_toBottomOf="@+id/moreInformation"
+        android:contentDescription="link for more information"/>
 
     <RelativeLayout
         android:layout_width="50dp"

@@ -30,7 +30,8 @@
                     android:textAlignment="center"
                     android:textColor="@color/clemsonOrange"
                     android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:contentDescription="Title of Activity"/>
 
                 <TextView
                     android:id="@+id/txtScore"
@@ -50,7 +51,8 @@
                     android:layout_alignParentRight="true"
                     android:text="0"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:contentDescription="current score"/>
 
             </RelativeLayout>
 
@@ -67,7 +69,8 @@
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:text="the question"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:contentDescription="The question being asked"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,7 +85,8 @@
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
                         android:backgroundTint="@color/regalia"
-                        android:text="choice 1" />
+                        android:text="choice 1"
+                        android:contentDescription="button with possible answer"/>
 
                     <Button
                         android:id="@+id/choice2"
@@ -92,7 +96,8 @@
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
                         android:backgroundTint="@color/regalia"
-                        android:text="choice 2" />
+                        android:text="choice 2"
+                        android:contentDescription="button with possible answer"/>
 
                     <Button
                         android:id="@+id/choice3"
@@ -102,7 +107,8 @@
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
                         android:backgroundTint="@color/regalia"
-                        android:text="choice 3" />
+                        android:text="choice 3"
+                        android:contentDescription="button with possible answer"/>
 
                     <Button
                         android:id="@+id/choice4"
@@ -112,7 +118,8 @@
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
                         android:backgroundTint="@color/regalia"
-                        android:text="choice 4" />
+                        android:text="choice 4"
+                        android:contentDescription="button with possible answer"/>
 
                 </LinearLayout>
 

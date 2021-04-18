@@ -31,6 +31,7 @@
                     android:textColor="@color/clemsonOrange"
                     android:textStyle="bold"
                     android:id="@+id/triviaName"
+                    android:contentDescription="Title of Activity"
                     />
 
                 <TextView
@@ -44,14 +45,15 @@
                     android:id="@+id/txtScore"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/Score"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/triviaName"
                     android:layout_alignParentRight="true"
+                    android:contentDescription="current score"
                     android:text="0"
-                    android:textSize="50sp"
                     android:textColor="@color/black"
-                    android:layout_below="@id/triviaName"/>
+                    android:textSize="50sp" />
 
             </RelativeLayout>
 
@@ -63,7 +65,8 @@
                 android:textSize="50sp"
                 android:textColor="@color/black"
                 android:layout_marginBottom="40dp"
-                android:id="@+id/txtquestion"/>
+                android:id="@+id/txtquestion"
+                android:contentDescription="The question being asked"/>
 
             <Button
                 android:layout_width="500dp"
@@ -74,7 +77,8 @@
                 android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="470dp"
-                android:id="@+id/choice1"/>
+                android:id="@+id/choice1"
+                android:contentDescription="button with possible answer"/>
 
             <Button
                 android:layout_width="500dp"
@@ -85,7 +89,8 @@
                 android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="470dp"
-                android:id="@+id/choice2"/>
+                android:id="@+id/choice2"
+                android:contentDescription="button with possible answer"/>
 
             <Button
                 android:layout_width="500dp"
@@ -96,7 +101,8 @@
                 android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="470dp"
-                android:id="@+id/choice3"/>
+                android:id="@+id/choice3"
+                android:contentDescription="button with possible answer"/>
 
             <Button
                 android:layout_width="500dp"
@@ -107,7 +113,8 @@
                 android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="470dp"
-                android:id="@+id/choice4"/>
+                android:id="@+id/choice4"
+                android:contentDescription="button with possible answer"/>
 
 
         </LinearLayout>

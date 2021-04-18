@@ -64,7 +64,11 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
 
     @Override
     public int getItemCount() {
-        return ldScores.size();
+        if(ldScores.size()>5){
+            return 10;
+        }else{
+            return ldScores.size();
+        }
     }
 
     public ArrayList<leaderboard> currentList(){

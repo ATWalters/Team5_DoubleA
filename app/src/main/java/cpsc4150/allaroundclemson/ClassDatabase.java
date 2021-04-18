@@ -66,7 +66,7 @@ public class ClassDatabase extends SQLiteOpenHelper {
                 String name = cursor.getString(1);
                 String code = cursor.getString(2);
                 int section = cursor.getInt(3);
-                clemsonClass temp = new clemsonClass(name, code, section, 1);
+                clemsonClass temp = new clemsonClass(name, code, section);
                 ad.add(temp);
             }while(cursor.moveToNext());
         }

@@ -19,7 +19,8 @@
         android:textColor="@color/clemsonOrange"
         android:textStyle="bold"
         android:padding="18dp"
-        android:id="@+id/iconTitle"/>
+        android:id="@+id/iconTitle"
+        android:contentDescription="Title of Activity"/>
 
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -31,7 +32,8 @@
         android:layout_marginTop="120dp"
         android:layout_toLeftOf="@id/firstmedal_view"
         android:layout_marginRight="20dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="solid orange icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -51,6 +53,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         app:cardBackgroundColor="@color/white"
+        android:contentDescription="first place medal icon"
         >
 
         <ImageView
@@ -71,7 +74,8 @@
         android:layout_toRightOf="@id/firstmedal_view"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="120dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="second place medal icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -91,6 +95,7 @@
         android:layout_toLeftOf="@id/gradcap_view"
         android:layout_marginRight="20dp"
         app:cardBackgroundColor="@color/white"
+        android:contentDescription="baseball icon"
         >
 
         <ImageView
@@ -111,7 +116,8 @@
         android:layout_marginTop="360dp"
         android:layout_toRightOf="@id/gradcap_view"
         android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="soccer icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -129,7 +135,8 @@
         card_view:cardCornerRadius="50dp"
         android:layout_marginTop="360dp"
         android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="basketball icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -147,7 +154,8 @@
         card_view:cardCornerRadius="50dp"
         android:layout_marginTop="240dp"
         android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="football icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -166,7 +174,8 @@
         android:layout_marginTop="240dp"
         android:layout_toRightOf="@id/soccer_view"
         android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="graduation icon">
 
         <ImageView
             android:layout_width="50dp"
@@ -185,7 +194,8 @@
         android:layout_marginTop="240dp"
         android:layout_toLeftOf="@id/soccer_view"
         android:layout_marginRight="20dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        android:contentDescription="Clemson ring icon">
 
         <ImageView
             android:layout_width="50dp"

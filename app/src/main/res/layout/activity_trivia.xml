@@ -22,6 +22,7 @@
             android:textColor="@color/clemsonOrange"
             android:textStyle="bold"
             android:id="@+id/triviaName"
+            android:contentDescription="Title of Activity"
             />
 
         <TextView
@@ -32,7 +33,7 @@
             android:textColor="@color/black"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/triviaName"
-            android:id="@+id/txtScore"/>
+            android:id="@+id/txtScore" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
             android:text="0"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:layout_below="@id/triviaName"/>
+            android:layout_below="@id/triviaName"
+            android:contentDescription="current score of the game"/>
 
     </RelativeLayout>
 
@@ -54,7 +56,8 @@
         android:padding="8dp"
         android:textColor="@color/black"
         android:text="the question"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:contentDescription="The question being asked"/>
 
     <Button
         android:layout_width="match_parent"
@@ -64,7 +67,8 @@
         android:textSize="15sp"
         android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice1"/>
+        android:id="@+id/choice1"
+        android:contentDescription="button with possible answer"/>
 
     <Button
         android:layout_width="match_parent"
@@ -74,7 +78,8 @@
         android:textSize="15sp"
         android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice2"/>
+        android:id="@+id/choice2"
+        android:contentDescription="button with possible answer"/>
 
     <Button
         android:layout_width="match_parent"
@@ -84,7 +89,8 @@
         android:textSize="15sp"
         android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice3"/>
+        android:id="@+id/choice3"
+        android:contentDescription="button with possible answer"/>
 
     <Button
         android:layout_width="match_parent"
@@ -94,7 +100,8 @@
         android:backgroundTint="@color/regalia"
         android:textSize="15sp"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice4"/>
+        android:id="@+id/choice4"
+        android:contentDescription="button with possible answer"/>
 
 
 

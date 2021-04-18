@@ -7,13 +7,6 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/trivia_information"
-        android:textSize="30sp"
-        android:textAlignment="center"/>
-
 
     <EditText
         android:layout_width="match_parent"
@@ -22,5 +15,6 @@
         android:layout_marginTop="30dp"
         android:textSize="20sp"
         android:id="@+id/ETusername"
-        android:hint="@string/enter_username" />
+        android:hint="@string/enter_username"
+        android:contentDescription="username to enter"/>
 </LinearLayout>

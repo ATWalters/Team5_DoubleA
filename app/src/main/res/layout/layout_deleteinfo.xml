@@ -7,13 +7,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="input Class Name and Code\nEX CPSC 3120"
-        android:id="@+id/exText"/>
+        android:text="Input Class Name and Code"
+        android:id="@+id/exText"
+        android:contentDescription="Explains what is looked for"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@id/exText"
-        android:id="@+id/edittext2"/>
+        android:id="@+id/edittext2"
+        android:hint="CPSC 3120"
+        android:contentDescription="Input class that should be deleted"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

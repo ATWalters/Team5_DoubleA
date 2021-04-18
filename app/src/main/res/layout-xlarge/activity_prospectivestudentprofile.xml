@@ -18,7 +18,8 @@
             android:textAlignment="center"
             android:textColor="@color/clemsonOrange"
             android:textSize="100sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Title of Activity"/>
 
         <TextView
             android:id="@+id/profileInformation"
@@ -29,7 +30,8 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="45sp"
-            android:layout_below="@id/profileType"/>
+            android:layout_below="@id/profileType"
+            android:contentDescription="Applications Taken banner"/>
 
         <TextView
             android:layout_width="400dp"
@@ -39,7 +41,8 @@
             android:textSize="40sp"
             android:id="@+id/appstaken"
             android:textColor="@color/black"
-            android:layout_below="@id/profileInformation"/>
+            android:layout_below="@id/profileInformation"
+            android:contentDescription="Application taken"/>
 
         <TextView
             android:layout_width="400dp"
@@ -52,6 +55,7 @@
             android:layout_marginLeft="410dp"
             android:id="@+id/duedates"
             android:layout_below="@id/profileType"
+            android:contentDescription="Due dates banner"
             />
 
         <TextView
@@ -64,6 +68,7 @@
             android:textColor="@color/black"
             android:layout_marginLeft="410dp"
             android:layout_below="@id/duedates"
+            android:contentDescription="Due dates information"
             />
 
         <TextView
@@ -73,7 +78,8 @@
             android:layout_marginTop="300dp"
             android:textSize="30sp"
             android:textAlignment="center"
-            android:layout_below="@id/appstaken"/>
+            android:layout_below="@id/appstaken"
+            android:contentDescription="link for more information"/>
 
         <RelativeLayout
             android:layout_width="50dp"

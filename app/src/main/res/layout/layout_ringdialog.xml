@@ -8,5 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:inputType="number"
-        android:id="@+id/ringYear"/>
+        android:id="@+id/ringYear"
+        android:contentDescription="Enter year getting ring"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

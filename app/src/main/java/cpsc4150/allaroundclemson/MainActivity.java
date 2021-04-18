@@ -1,14 +1,14 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity implements profileInfoDialog.profileInfoDialogListener {
 

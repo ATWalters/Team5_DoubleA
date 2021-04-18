@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class prospectiveStudent extends AppCompatActivity {
 

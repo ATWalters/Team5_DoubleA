@@ -1,7 +1,5 @@
 package cpsc4150.allaroundclemson;
 
-import java.util.Comparator;
-
 public class leaderboard implements Comparable<leaderboard>{
     String username;
     int score;

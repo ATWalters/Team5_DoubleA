@@ -1,31 +1,19 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.reflect.TypeToken;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class gameandicons extends AppCompatActivity implements gameInfoDialog.gameInfoDialogListener {
     private Button startBtn;

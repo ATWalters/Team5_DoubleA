@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioGroup;
@@ -54,6 +56,12 @@ public class profileInfoDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         listener.applyProfile(profileChosen);
+                        SharedPreferences prefs = getActivity().getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+
+                        Log.e("Dialog", "" + profileChosen);
+                        editor.putInt("profile_chosen", profileChosen).apply();
+
                         dialog.dismiss();
                     }
                 })

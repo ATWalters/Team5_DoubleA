@@ -3,16 +3,27 @@ package cpsc4150.allaroundclemson;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements profileInfoDialog.profileInfoDialogListener {
+
+    String TAG = "Main";
+    profileInfoDialog infoDialog = new profileInfoDialog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences prefs = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        boolean firstProfClick = prefs.getBoolean("first_profile_click", true);
+
 
         CardView profile = findViewById(R.id.profile_view);
         CardView maps = findViewById(R.id.map_view);
@@ -24,7 +35,15 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
             @Override
             public void onClick(View v)
             {
-                openProfileDialog();
+                if(firstProfClick){
+                    Log.e(TAG, "First profile click");
+                    editor.putBoolean("first_profile_click", false).apply();
+                    openProfileDialog();
+                }else{
+                    Log.e(TAG, "Profile clicked");
+                    int userType = prefs.getInt("profile_chosen", 1);
+                    applyProfile(userType);
+                }
             }
 
         });
@@ -62,7 +81,6 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
     }
 
     public void openProfileDialog(){
-        profileInfoDialog infoDialog = new profileInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "profileInfoDialog");
     }
 

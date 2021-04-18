@@ -31,7 +31,7 @@ public class gameInfoDialog extends AppCompatDialogFragment {
 
 
         builder.setView(view)
-                .setTitle("Class Information")
+                .setTitle("Trivia Information")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -42,13 +42,14 @@ public class gameInfoDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         username = ((EditText) view.findViewById(R.id.ETusername)).getText().toString();
-                        listener.applyUsername(username);
 
                         SharedPreferences prefs = getActivity().getSharedPreferences("myprefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = prefs.edit();
 
                         Log.e("Dialog", "" + username);
                         editor.putString("username", username).apply();
+
+                        listener.applyUsername(username);
 
                     }
                 });

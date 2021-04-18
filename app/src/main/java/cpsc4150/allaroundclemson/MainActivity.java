@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
             {
                 if(firstProfClick){
                     Log.e(TAG, "First profile click");
-                    editor.putBoolean("first_profile_click", false).apply();
+                    editor.putBoolean("first_profile_click", false).commit();
                     openProfileDialog();
                 }else{
                     Log.e(TAG, "Profile clicked");

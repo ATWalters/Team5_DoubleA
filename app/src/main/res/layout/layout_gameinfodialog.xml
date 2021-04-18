@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trivia Information"
+        android:text="@string/trivia_information"
         android:textSize="30sp"
         android:textAlignment="center"/>
 
@@ -19,8 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:text="Username"
         android:layout_marginTop="30dp"
         android:textSize="20sp"
-        android:id="@+id/ETusername"/>
+        android:id="@+id/ETusername"
+        android:hint="@string/enter_username" />
 </LinearLayout>

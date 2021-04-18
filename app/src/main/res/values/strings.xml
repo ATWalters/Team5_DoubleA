@@ -426,5 +426,7 @@
     <string name="icons">Icons</string>
     <string name="leaderboard">Leaderboard</string>
     <string name="game_play">Game Play</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="trivia_information">Trivia Information</string>
 
 </resources>

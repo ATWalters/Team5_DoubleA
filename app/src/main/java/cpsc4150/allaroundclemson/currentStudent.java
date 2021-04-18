@@ -3,7 +3,6 @@ package cpsc4150.allaroundclemson;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -33,6 +32,7 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         recyclerView.setAdapter(adapter);
 
         btn = findViewById(R.id.addClass);
+        db.popAdapter(adapter);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,4 +90,5 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         deleteInfoDialog infoDialog = new deleteInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "deleteInfoDialog");
     }
+
 }

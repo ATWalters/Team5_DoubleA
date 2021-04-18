@@ -32,7 +32,6 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
         Collections.sort(ldScores);
 
         notifyItemRangeChanged(0, getItemCount());
-        //notifyItemInserted(getItemCount());
     }
 
     public void deleteItem(int position){
@@ -65,7 +64,7 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
     @Override
     public int getItemCount() {
         if(ldScores.size()>5){
-            return 10;
+            return 5;
         }else{
             return ldScores.size();
         }

@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Adapter that adds the classes the user inputs in the classInfoDialog into the currentStudent Activity.
+*/
 package cpsc4150.allaroundclemson;
 
 import android.app.AlertDialog;

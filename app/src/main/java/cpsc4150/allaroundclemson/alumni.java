@@ -1,3 +1,10 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Activity that presents the alumni activity with information for Clemson Alumni
+*/
+
 package cpsc4150.allaroundclemson;
 
 import android.content.Intent;

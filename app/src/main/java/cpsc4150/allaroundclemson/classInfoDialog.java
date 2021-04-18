@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Opens up the dialog to get information about the class the user is trying to enter.
+*/
 package cpsc4150.allaroundclemson;
 
 import android.app.AlertDialog;

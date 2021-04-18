@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Object created to hold class information
+*/
 package cpsc4150.allaroundclemson;
 
 public class clemsonClass {

@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Delete dialog that opens when the user wants to delete a class
+*/
 package cpsc4150.allaroundclemson;
 
 import android.app.AlertDialog;

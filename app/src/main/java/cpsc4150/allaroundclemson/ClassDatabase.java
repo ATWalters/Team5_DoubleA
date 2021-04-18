@@ -1,3 +1,10 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Database to hold the information that was added in the current student activity.
+So information wil be saved when they exit the application.
+*/
 package cpsc4150.allaroundclemson;
 
 import android.content.ContentValues;

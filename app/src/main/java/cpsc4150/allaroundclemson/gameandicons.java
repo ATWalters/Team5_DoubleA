@@ -1,3 +1,10 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: opens the game and icons activity, which shows a leaderboard for trivia game, allows you
+to start a trivia game, and allows you to go to the icons activity.
+*/
 package cpsc4150.allaroundclemson;
 
 import androidx.appcompat.app.AppCompatActivity;

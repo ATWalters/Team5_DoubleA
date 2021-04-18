@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Presents the currect student activity and allows for classes to be added or deleted by user
+*/
 package cpsc4150.allaroundclemson;
 
 import android.content.Intent;

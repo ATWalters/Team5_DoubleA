@@ -1,3 +1,9 @@
+/*
+Name: Allison Tizik and Austin Walters
+Date: 4/18/2021
+
+Description: Opens the fan activity that allows for users to click on links to sports schedules
+*/
 package cpsc4150.allaroundclemson;
 
 import android.content.Intent;

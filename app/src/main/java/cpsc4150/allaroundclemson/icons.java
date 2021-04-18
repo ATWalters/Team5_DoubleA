@@ -1,25 +1,21 @@
 package cpsc4150.allaroundclemson;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import java.util.Calendar;
 
@@ -112,6 +108,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                                     if(day == Calendar.FRIDAY) {
                                         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
                                         {
+                                            Log.e("icons", "No Camera Permission");
                                             requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
                                         }
                                         else
@@ -122,6 +119,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
 
                                         }
 
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "It isn't Friday yet!", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
                                     }
 
                                 }
@@ -274,7 +274,7 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                                     int month = calendar.get(Calendar.MONTH);
                                     view = 1;
 
-                                    if(month > 1 || month < 7) {
+                                    if(month > 1 && month < 7) {
                                         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
                                         {
                                             requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
@@ -287,6 +287,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
 
                                         }
 
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "It isn't baseball season yet!", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
                                     }
 
                                 }
@@ -356,6 +359,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
 
                                         }
 
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "It isn't basketball season yet!", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
                                     }
                                 }
 
@@ -424,6 +430,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                                             startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
                                         }
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "It isn't soccer season yet!", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
                                     }
 
                                 }
@@ -492,6 +501,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                                             startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
                                         }
+                                    }else{
+                                        Toast.makeText(getApplicationContext(), "It isn't football season yet!", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
                                     }
 
                                 }

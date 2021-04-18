@@ -56,6 +56,7 @@ public class profileInfoDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         listener.applyProfile(profileChosen);
+
                         SharedPreferences prefs = getActivity().getSharedPreferences("myprefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = prefs.edit();
 

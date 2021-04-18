@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,12 +41,16 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         btn = findViewById(R.id.addClass);
         db.popAdapter(adapter);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openClassDialog();
-            }
-        });
+        if (adapter.getItemCount() < 7) {
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openClassDialog();
+                }
+            });
+        }else{
+            Toast.makeText(this, "Too many classes, delete on before adding another", Toast.LENGTH_LONG);
+        }
 
         deleteBtn = findViewById(R.id.removeClass);
 

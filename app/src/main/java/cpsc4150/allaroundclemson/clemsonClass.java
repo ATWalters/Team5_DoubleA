@@ -5,6 +5,7 @@ public class clemsonClass {
     private String classCode;
     private int section;
     private int time;
+    private long id;
 
     public clemsonClass(String Mname, String MclassCode, int Msection, int Mtime){
         this.name = Mname;
@@ -13,6 +14,9 @@ public class clemsonClass {
         this.time = Mtime;
     }
 
+    public void setId(long ID){
+        this.id = ID;
+    }
     public int getSection() {
         return section;
     }

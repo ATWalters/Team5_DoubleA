@@ -19,6 +19,7 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
     private Button deleteBtn;
     RecyclerView recyclerView;
     clemsonClassAdapter adapter;
+    private ClassDatabase db;
 
 
     @Override
@@ -68,6 +69,8 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
 
         clemsonClass cl = new clemsonClass(name, code, section, time);
         adapter.add(cl);
+        long id = db.addClass(cl);
+        cl.setId(id);
     }
 
     public void openClassDialog(){

@@ -133,7 +133,7 @@
       ]
     },
     {
-      "question": "What year did clemson adopt their signature colors orange and purple?",
+      "question": "What year did Clemson adopt their signature colors orange and purple?",
       "answer": "1896",
       "choices": [
         {
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "question": "When was the first meeting between Clemson and Alabama?",
+      "question": "What years did Clemson win the Football National Championship?",
       "answer": "1981, 2016, 2018",
       "choices": [
         {
@@ -543,7 +543,7 @@
     },
     {
       "question": "What is said to occur if you take a stroll with your loved one done Lovers' Lane?",
-      "answer": "",
+      "answer": "That you will marry each other",
       "choices": [
         {
           "1":"That you will never break up",

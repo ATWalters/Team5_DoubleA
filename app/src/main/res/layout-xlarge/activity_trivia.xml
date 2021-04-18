@@ -28,7 +28,7 @@
                     android:text="TRIVIA"
                     android:textSize="100sp"
                     android:textAlignment="center"
-                    android:textColor="@color/orange"
+                    android:textColor="@color/clemsonOrange"
                     android:textStyle="bold"
                     android:id="@+id/triviaName"
                     />
@@ -38,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="Score"
                     android:textSize="50sp"
+                    android:textColor="@color/black"
                     android:layout_alignParentLeft="true"
                     android:layout_below="@id/triviaName"
                     android:id="@+id/txtScore"/>
@@ -48,6 +49,7 @@
                     android:id="@+id/Score"
                     android:layout_alignParentRight="true"
                     android:text="0"
+                    android:textColor="@color/black"
                     android:textSize="50sp"
                     android:layout_below="@id/triviaName"/>
 
@@ -59,18 +61,20 @@
                 android:text="the question"
                 android:padding="8dp"
                 android:textSize="50sp"
+                android:textColor="@color/black"
                 android:layout_marginBottom="40dp"
                 android:id="@+id/txtquestion"/>
 
             <Button
+                android:id="@+id/choice1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="choice 1"
-                android:padding="8dp"
-                android:textSize="30sp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="370dp"
-                android:id="@+id/choice1"/>
+                android:layout_marginBottom="24dp"
+                android:padding="8dp"
+                android:backgroundTint="@color/regalia"
+                android:text="choice 1"
+                android:textSize="30sp" />
 
             <Button
                 android:layout_width="300dp"
@@ -78,6 +82,7 @@
                 android:text="choice 2"
                 android:padding="8dp"
                 android:textSize="30sp"
+                android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="370dp"
                 android:id="@+id/choice2"/>
@@ -88,6 +93,7 @@
                 android:text="choice 3"
                 android:padding="8dp"
                 android:textSize="30sp"
+                android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="370dp"
                 android:id="@+id/choice3"/>
@@ -98,6 +104,7 @@
                 android:text="choice 4"
                 android:padding="8dp"
                 android:textSize="30sp"
+                android:backgroundTint="@color/regalia"
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="370dp"
                 android:id="@+id/choice4"/>

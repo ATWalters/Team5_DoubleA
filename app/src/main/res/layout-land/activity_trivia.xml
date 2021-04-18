@@ -28,8 +28,8 @@
                     android:layout_height="wrap_content"
                     android:text="TRIVIA"
                     android:textAlignment="center"
-                    android:textColor="@color/orange"
-                    android:textSize="30sp"
+                    android:textColor="@color/clemsonOrange"
+                    android:textSize="40sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -39,6 +39,7 @@
                     android:layout_below="@id/triviaName"
                     android:layout_alignParentLeft="true"
                     android:text="Score"
+                    android:textColor="@color/black"
                     android:textSize="30sp" />
 
                 <TextView
@@ -48,6 +49,7 @@
                     android:layout_below="@id/triviaName"
                     android:layout_alignParentRight="true"
                     android:text="0"
+                    android:textColor="@color/black"
                     android:textSize="30sp" />
 
             </RelativeLayout>
@@ -63,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
                     android:padding="8dp"
+                    android:textColor="@color/black"
                     android:text="the question"
                     android:textSize="30sp" />
 
@@ -78,6 +81,7 @@
                         android:layout_marginLeft="0dp"
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
+                        android:backgroundTint="@color/regalia"
                         android:text="choice 1" />
 
                     <Button
@@ -87,6 +91,7 @@
                         android:layout_marginLeft="0dp"
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
+                        android:backgroundTint="@color/regalia"
                         android:text="choice 2" />
 
                     <Button
@@ -96,6 +101,7 @@
                         android:layout_marginLeft="0dp"
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
+                        android:backgroundTint="@color/regalia"
                         android:text="choice 3" />
 
                     <Button
@@ -105,6 +111,7 @@
                         android:layout_marginLeft="0dp"
                         android:layout_marginBottom="0dp"
                         android:padding="8dp"
+                        android:backgroundTint="@color/regalia"
                         android:text="choice 4" />
 
                 </LinearLayout>

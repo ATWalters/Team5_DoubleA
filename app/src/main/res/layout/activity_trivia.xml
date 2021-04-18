@@ -17,9 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TRIVIA"
-            android:textSize="30sp"
+            android:textSize="60sp"
             android:textAlignment="center"
-            android:textColor="@color/orange"
+            android:textColor="@color/clemsonOrange"
             android:textStyle="bold"
             android:id="@+id/triviaName"
             />
@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Score"
             android:textSize="30sp"
+            android:textColor="@color/black"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/triviaName"
             android:id="@+id/txtScore"/>
@@ -39,6 +40,7 @@
             android:id="@+id/Score"
             android:layout_alignParentRight="true"
             android:text="0"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:layout_below="@id/triviaName"/>
 
@@ -50,14 +52,17 @@
         android:layout_height="121dp"
         android:layout_marginBottom="40dp"
         android:padding="8dp"
+        android:textColor="@color/black"
         android:text="the question"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="choice 1"
         android:padding="8dp"
+        android:textSize="15sp"
+        android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice1"/>
 
@@ -66,6 +71,8 @@
         android:layout_height="wrap_content"
         android:text="choice 2"
         android:padding="8dp"
+        android:textSize="15sp"
+        android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice2"/>
 
@@ -74,6 +81,8 @@
         android:layout_height="wrap_content"
         android:text="choice 3"
         android:padding="8dp"
+        android:textSize="15sp"
+        android:backgroundTint="@color/regalia"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice3"/>
 
@@ -82,6 +91,8 @@
         android:layout_height="wrap_content"
         android:text="choice 4"
         android:padding="8dp"
+        android:backgroundTint="@color/regalia"
+        android:textSize="15sp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice4"/>
 

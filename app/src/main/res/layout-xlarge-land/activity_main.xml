@@ -13,7 +13,8 @@
         android:textAlignment="center"
         android:textSize="115sp"
         android:textStyle="bold"
-        android:textColor="@color/orange"/>
+        android:textColor="@color/clemsonOrange"/>
+
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_view"
@@ -23,7 +24,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"
-        app:cardBackgroundColor="@color/orange">
+        app:cardBackgroundColor="@color/clemsonOrange">
 
         <TextView
             android:layout_width="750dp"
@@ -31,6 +32,7 @@
             android:text="@string/profileTitle"
             android:textAlignment="center"
             android:layout_marginLeft="250dp"
+            android:textColor="@color/black"
             android:textSize="100sp"/>
 
         <ImageView
@@ -49,7 +51,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="310dp"
         android:layout_marginLeft="10dp"
-        app:cardBackgroundColor="@color/orange"
+        app:cardBackgroundColor="@color/clemsonOrange"
         >
 
         <TextView
@@ -58,6 +60,7 @@
             android:text="@string/mapTitle"
             android:textAlignment="center"
             android:layout_marginLeft="250dp"
+            android:textColor="@color/black"
             android:textSize="100sp"/>
         <ImageView
             android:layout_width="250dp"
@@ -76,7 +79,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="470dp"
         android:layout_marginLeft="10dp"
-        app:cardBackgroundColor="@color/orange">
+        app:cardBackgroundColor="@color/clemsonOrange">
 
         <TextView
             android:layout_width="750dp"
@@ -84,6 +87,7 @@
             android:text="@string/sportsTitle"
             android:textAlignment="center"
             android:layout_marginLeft="250dp"
+            android:textColor="@color/black"
             android:textSize="100sp"/>
 
         <ImageView
@@ -102,7 +106,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="630dp"
         android:layout_marginLeft="10dp"
-        app:cardBackgroundColor="@color/orange">
+        app:cardBackgroundColor="@color/clemsonOrange">
 
         <TextView
             android:layout_width="750dp"
@@ -110,6 +114,7 @@
             android:text="@string/gameTitle"
             android:textAlignment="center"
             android:layout_marginLeft="250dp"
+            android:textColor="@color/black"
             android:textSize="100sp"/>
 
         <ImageView

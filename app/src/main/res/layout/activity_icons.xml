@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ICONS"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textAlignment="center"
-        android:textColor="@color/orange"
+        android:textColor="@color/clemsonOrange"
         android:textStyle="bold"
         android:padding="18dp"
         android:id="@+id/iconTitle"/>

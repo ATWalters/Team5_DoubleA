@@ -13,7 +13,8 @@
         android:textAlignment="center"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:textColor="@color/orange"/>
+        android:textColor="@color/clemsonOrange"/>
+
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_view"
@@ -22,7 +23,7 @@
         android:layout_height="200dp"
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="150dp"
-        app:cardBackgroundColor="@color/orange">
+        app:cardBackgroundColor="@color/clemsonOrange">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -40,7 +41,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="210dp"
-        app:cardBackgroundColor="@color/orange"
+        app:cardBackgroundColor="@color/clemsonOrange"
         >
 
         <ImageView
@@ -59,7 +60,7 @@
         android:layout_height="200dp"
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="360dp"
-        app:cardBackgroundColor="@color/orange"
+        app:cardBackgroundColor="@color/clemsonOrange"
         >
 
         <ImageView
@@ -79,7 +80,7 @@
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="360dp"
         android:layout_marginLeft="210dp"
-        app:cardBackgroundColor="@color/orange">
+        app:cardBackgroundColor="@color/clemsonOrange">
 
         <ImageView
             android:layout_width="wrap_content"

@@ -2,8 +2,10 @@ package cpsc4150.allaroundclemson;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,9 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
     private static final int CAMERA_REQUEST = 1888;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
 
+    private String TAG = "Icons";
+    private static final int NUM_ICONS = 9;
+
     private CardView shirtView;
     private CardView firstM;
     private CardView secondM;
@@ -35,23 +40,38 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
     private CardView gradCap;
     private CardView ring;
 
+    private boolean orangeCompleted;
+    private boolean firstCompleted;
+    private boolean secondCompleted;
+    private boolean baseballCompleted;
+    private boolean soccerCompleted;
+    private boolean basketballCompleted;
+    private boolean footballCompleted;
+    private boolean gradCompleted;
+    private boolean ringCompleted;
 
     private int view;
 
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
-
-    private void setMedals(int s){
-        if(s == 10){
-            secondM.setCardBackgroundColor(getColor(R.color.orange));
-            firstM.setCardBackgroundColor(getColor(R.color.orange));
-        }else if (s > 8){
-            secondM.setCardBackgroundColor(getColor(R.color.orange));
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icons);
+
+        prefs = getSharedPreferences("myprefs", Context.MODE_PRIVATE);
+        editor = prefs.edit();
+
+        orangeCompleted = prefs.getBoolean("orange_completed", false);
+        firstCompleted = prefs.getBoolean("first_completed", false);
+        secondCompleted = prefs.getBoolean("second_completed", false);
+        baseballCompleted = prefs.getBoolean("baseball_completed", false);
+        soccerCompleted = prefs.getBoolean("soccer_completed", false);
+        basketballCompleted = prefs.getBoolean("basketball_completed", false);
+        footballCompleted = prefs.getBoolean("football_completed", false);
+        gradCompleted = prefs.getBoolean("grad_completed", false);
+        ringCompleted = prefs.getBoolean("ring_completed", false);
 
         ImageButton back = (ImageButton) findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener()
@@ -79,7 +99,11 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
         gradCap = findViewById(R.id.gradcap_view);
         ring = findViewById(R.id.ring_view);
 
-        setMedals(score);
+        setMedals(score, editor);
+
+        for(int i = 0; i < NUM_ICONS; i++){
+            setView(i);
+        }
 
         shirtView.setOnClickListener(new View.OnClickListener()
         {
@@ -87,8 +111,8 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
             public void onClick(View v)
             {
 
-                if (shirtView.getCardBackgroundColor().getDefaultColor() == ContextCompat.getColor(getApplication(), R.color.white)){
-
+                //if (shirtView.getCardBackgroundColor().getDefaultColor() == ContextCompat.getColor(getApplication(), R.color.white)){
+                if(!orangeCompleted){
 
                     AlertDialog completed = new AlertDialog.Builder(icons.this)
                             // set message, title, and icon
@@ -611,7 +635,8 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
                 Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
-                setView(view);
+                updateCompleteds(view);
+                //setView(view);
             }
             else
             {
@@ -624,33 +649,75 @@ public class icons extends AppCompatActivity implements gradDialog.gradDialogLis
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
-            setView(view);
+            updateCompleteds(view);
+            //setView(view);
         }
     }
 
-    private void setView(int v){
+    private void setMedals(int s, SharedPreferences.Editor e){
+        if(s == 10){
+            e.putBoolean("first_completed", true).commit();
+            e.putBoolean("second_completed", true).commit();
+            //secondM.setCardBackgroundColor(getColor(R.color.orange));
+            //firstM.setCardBackgroundColor(getColor(R.color.orange));
+        }else if (s > 8){
+            //secondM.setCardBackgroundColor(getColor(R.color.orange));
+            e.putBoolean("second_completed", true).commit();
+        }
+    }
+
+    private void updateCompleteds(int v){
         switch(v){
             case 0:
+                editor.putBoolean("orange_completed", true).commit();
                 shirtView.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 1:
+                editor.putBoolean("baseball_completed", true).commit();
                 baseball.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 2:
+                editor.putBoolean("basketball_completed", true).commit();
                 basketball.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 3:
+                editor.putBoolean("soccer_completed", true).commit();
                 soccer.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 4:
+                editor.putBoolean("football_completed", true).commit();
                 football.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 5:
+                editor.putBoolean("grad_completed", true).commit();
                 gradCap.setCardBackgroundColor(getColor(R.color.orange));
                 break;
             case 6:
+                editor.putBoolean("ring_completed", true).commit();
                 ring.setCardBackgroundColor(getColor(R.color.orange));
                 break;
+        }
+    }
+    private void setView(int v){
+
+        if(v == 0 && orangeCompleted){
+            shirtView.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 1 && firstCompleted){
+            firstM.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 2 && secondCompleted){
+            secondM.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 3 && baseballCompleted){
+            baseball.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 4 && basketballCompleted){
+            basketball.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 5 && soccerCompleted){
+            soccer.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 6 && footballCompleted){
+            football.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 7 && gradCompleted){
+            gradCap.setCardBackgroundColor(getColor(R.color.orange));
+        }else if(v == 8 && ringCompleted){
+            ring.setCardBackgroundColor(getColor(R.color.orange));
         }
     }
 

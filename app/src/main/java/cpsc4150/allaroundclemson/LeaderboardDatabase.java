@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+//A database for storing all of the leaderboard objects
 public class LeaderboardDatabase extends SQLiteOpenHelper {
 
         private static final String DATABASE_NAME = "leaderboard.db";

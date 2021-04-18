@@ -21,6 +21,7 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
 
     }
 
+    //Adding a leaderboard to the adapter
     public void add(leaderboard content) {
         leaderboard current = content;
 
@@ -32,6 +33,7 @@ public class leaderboardAdapter extends RecyclerView.Adapter<leaderboardAdapter.
         //notifyItemInserted(getItemCount());
     }
 
+    //Removing a leaderboard from the adapter
     public void deleteItem(int position){
         leaderboard current = ldScores.get(position);
         ldScores.remove(position);

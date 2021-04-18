@@ -122,6 +122,8 @@ public class SportsActivity extends AppCompatActivity
     }
 
 
+    //Method that listens for if the back button inside of the description fragment is clicked
+    // if it is the description fragment is replaced with the list of penalties fraagment
     public void back_to_list_btn(View view) {
         setContentView(R.layout.activity_sports);
 

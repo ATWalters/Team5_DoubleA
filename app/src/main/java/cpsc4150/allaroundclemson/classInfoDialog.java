@@ -74,6 +74,8 @@ public class classInfoDialog extends AppCompatDialogFragment {
         }
     }
 
+    //Method that makes sure the passed in information is acceptable
+    // Displays toasts for any info that isn't acceptable
     public boolean checkInfo(String name, String code, int Section){
         boolean classPassed = false;
         AlertDialog dialog = (AlertDialog) getDialog();

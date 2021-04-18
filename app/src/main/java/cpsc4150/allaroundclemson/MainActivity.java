@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
 
     }
 
+    //Opens the dialog that asks the user what type of user they are
     public void openProfileDialog(){
         infoDialog.show(getSupportFragmentManager(), "profileInfoDialog");
     }
@@ -105,16 +106,19 @@ public class MainActivity extends AppCompatActivity implements profileInfoDialog
         }
     }
 
+    //Starts the game and trivia view
     public void startGameView(){
         Intent myIntent = new Intent(this, gameandicons.class);
         startActivity(myIntent);
     }
 
+    //Starts the sports view
     public void startSportsView(){
         Intent myIntent = new Intent(this, SportsActivity.class);
         startActivity(myIntent);
     }
 
+    //Starts the map view
     public void startMapsView(){
         Intent myIntent = new Intent(this, MapsActivity.class);
         startActivity(myIntent);

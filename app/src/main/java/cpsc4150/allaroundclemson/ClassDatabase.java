@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+//Class that gives methods for adding classes to a database as well as removing them
 public class ClassDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "classes.db";
     private static final int VERSION = 1;
@@ -37,6 +38,7 @@ public class ClassDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //Method that will add a clemsonClass object to the database
     public long addClass(clemsonClass c){
         SQLiteDatabase db = getWritableDatabase();
 
@@ -48,6 +50,7 @@ public class ClassDatabase extends SQLiteOpenHelper {
         return db.insert(ClassTable.TABLE, null, values);
     }
 
+    //Method that will remove the class that has the name and code passed in from the database
     public void deleteClass(String name, String code){
         SQLiteDatabase db = getWritableDatabase();
         int rowsDeleted = db.delete(ClassTable.TABLE,
@@ -55,6 +58,7 @@ public class ClassDatabase extends SQLiteOpenHelper {
                 new String[] {code, name});
     }
 
+    //Method that is used to fill the adapter that populates the recyclerview of the classes
     public void popAdapter(clemsonClassAdapter ad){
         SQLiteDatabase db = getReadableDatabase();
 

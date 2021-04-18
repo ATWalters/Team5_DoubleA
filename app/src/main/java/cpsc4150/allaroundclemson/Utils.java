@@ -7,6 +7,7 @@ import java.io.InputStream;
 
 public class Utils {
 
+    //Method that reads the json file so it can be parsed
     static String getJsonFromAssets(Context context, String filename){
         String jsonString;
 

@@ -96,6 +96,7 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
 
     }
 
+    //Method that starts the icon activity
     private void startIconActivity() {
         Intent myIntent = new Intent(this, icons.class);
         ArrayList<leaderboard> list = adapter.currentList();
@@ -112,14 +113,13 @@ public class gameandicons extends AppCompatActivity implements gameInfoDialog.ga
             has both username and score
          */
 
-
-
         /*
             Icon button brings you to new page with all the icons
          */
 
     }
 
+    //Method that opens the game dialog
     public void openGameDialog(){
         gameInfoDialog infoDialog = new gameInfoDialog();
         infoDialog.show(getSupportFragmentManager(), "gameInfoDialog");

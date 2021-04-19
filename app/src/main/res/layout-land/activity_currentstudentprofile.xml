@@ -3,6 +3,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profileLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -44,15 +45,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvClasses"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="121dp"
         android:layout_marginTop="12dp"
+        android:contentDescription="allows for classes to be added"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:contentDescription="allows for classes to be added"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     <Button
@@ -105,6 +106,15 @@
 
         </ImageButton>
     </RelativeLayout>
-
+    <Button
+        android:id="@+id/changeBtn"
+        android:backgroundTint="@color/regalia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/change_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,9 +98,21 @@
                 android:background="@drawable/back_background"
                 android:contentDescription="@string/back_to_previous_page"
                 android:src="@drawable/back_arrow">
-
             </ImageButton>
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/changeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/psLink"
+            android:layout_alignStart="@+id/psLink"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="148dp"
+            android:backgroundTint="@color/regalia"
+            android:text="@string/change_profile" />
+
 
     </RelativeLayout>
 </ScrollView>

@@ -171,6 +171,10 @@
                 android:background="@color/clemsonOrange"
                 android:contentDescription="link to women's tennis schedule"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
             <RelativeLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -189,7 +193,16 @@
 
                 </ImageButton>
             </RelativeLayout>
-
+                <Button
+                    android:id="@+id/changeBtn"
+                    android:layout_weight="60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/regalia"
+                    android:text="@string/change_profile"/>
+        </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

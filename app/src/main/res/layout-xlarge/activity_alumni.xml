@@ -2,6 +2,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -101,10 +102,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/back_background"
-            android:src="@drawable/back_arrow"
-            android:contentDescription="@string/back_to_previous_page">
+            android:contentDescription="@string/back_to_previous_page"
+            android:src="@drawable/back_arrow">
 
         </ImageButton>
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="247dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/regalia"
+        android:text="@string/change_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

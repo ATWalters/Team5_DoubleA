@@ -14,17 +14,16 @@
         android:id="@+id/profileType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Title of Activity"
         android:text="@string/current_student"
         android:textAlignment="center"
         android:textColor="@color/clemsonOrange"
         android:textSize="70sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Title of Activity"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -60,33 +59,29 @@
         android:id="@+id/addClass"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
         android:layout_weight="1"
-        android:text="@string/add"
         android:backgroundTint="@color/regalia"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/profileType"
         android:contentDescription="add button"
-         />
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/profileType" />
 
     <Button
         android:id="@+id/removeClass"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="96dp"
         android:layout_weight="1"
-        android:text="@string/delete"
         android:backgroundTint="@color/regalia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintRight_toLeftOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/profileType"
         android:contentDescription="delete button to delete classes"
-        />
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/profileType" />
 
     <RelativeLayout
         android:layout_width="50dp"
@@ -101,18 +96,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/back_background"
-            android:src="@drawable/back_arrow"
-            android:contentDescription="@string/back_to_previous_page">
+            android:contentDescription="@string/back_to_previous_page"
+            android:src="@drawable/back_arrow">
 
         </ImageButton>
     </RelativeLayout>
+
     <Button
         android:id="@+id/changeBtn"
-        android:backgroundTint="@color/regalia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/regalia"
         android:text="@string/change_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

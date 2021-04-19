@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cpsc4150.allaroundclemson">
 
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use

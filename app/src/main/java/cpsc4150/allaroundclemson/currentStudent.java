@@ -41,16 +41,19 @@ public class currentStudent extends AppCompatActivity implements classInfoDialog
         btn = findViewById(R.id.addClass);
         db.popAdapter(adapter);
 
-        if (adapter.getItemCount() < 7) {
+
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openClassDialog();
+
+                    if (adapter.getItemCount() < 7) {
+                        openClassDialog();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Too many classes, delete on before adding another", Toast.LENGTH_LONG);
+                    }
                 }
             });
-        }else{
-            Toast.makeText(this, "Too many classes, delete on before adding another", Toast.LENGTH_LONG);
-        }
+
 
         deleteBtn = findViewById(R.id.removeClass);
 

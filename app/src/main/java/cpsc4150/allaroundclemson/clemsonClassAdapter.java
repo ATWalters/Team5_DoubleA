@@ -111,7 +111,12 @@ public class clemsonClassAdapter extends RecyclerView.Adapter<clemsonClassAdapte
 
     @Override
     public int getItemCount() {
-        return listClemsonClasses.size();
+        if(listClemsonClasses.size() > 7){
+            return 7;
+        }else{
+            return listClemsonClasses.size();
+        }
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
